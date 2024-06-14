@@ -26,7 +26,7 @@ const ServicesSection = () => {
           {[
             {
               icon: "icon_code.svg",
-              title: "Custom Software Development",
+              title: "ERP for Manufacturing",
               link: "service_details.html",
               services: [
                 "Software architecture design",
@@ -37,7 +37,7 @@ const ServicesSection = () => {
             },
             {
               icon: "icon_programming_tree.svg",
-              title: "Audit & IT Consulting Services",
+              title: "ERP for Logistics",
               link: "service_details.html",
               services: [
                 "TechGuard Audit",
@@ -48,7 +48,7 @@ const ServicesSection = () => {
             },
             {
               icon: "icon_monitor_2.svg",
-              title: "Web Application Design and Development",
+              title: "ESG Automation",
               link: "service_details.html",
               services: [
                 "Web app development services",
@@ -59,7 +59,7 @@ const ServicesSection = () => {
             },
             {
               icon: "icon_phone.svg",
-              title: "Mobile App Design and Development",
+              title: "Asset Tracking",
               link: "service_details.html",
               services: [
                 "Android development services",
@@ -70,7 +70,7 @@ const ServicesSection = () => {
             },
             {
               icon: "icon_bug.svg",
-              title: "Best UI/UX Design Services",
+              title: "Paper Production Tracking",
               link: "service_details.html",
               services: [
                 "PixelPerfection UI/UX Design",
@@ -81,7 +81,7 @@ const ServicesSection = () => {
             },
             {
               icon: "icon_programming.svg",
-              title: "Maintenance and Customer Support",
+              title: "FMEA Insight",
               link: "service_details.html",
               services: [
                 "CareCraft Maintenance",

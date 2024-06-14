@@ -1,5 +1,6 @@
 import React from "react";
-
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import "./App.css"
 // import shapeTitleUnderline from "./images/shapes/shape_title_under_line.svg";
 import circleEngine1 from "../assets/images/hero/circle_engine_1.webp";
 import circleEngine2 from "../assets/images/hero/circle_engine_2.webp";
@@ -20,7 +21,7 @@ const HeroSection = () => {
               <div className="content_wrap">
                 <div
                   className="heading_focus_text has_underline text-white d-inline-flex"
-                  // style={{ backgroundImage: `url(${shapeTitleUnderline})` }}
+                   style={{ marginTop:"50px" }}
                 >
                   Perfect Company Solution
                 </div>
@@ -63,7 +64,7 @@ const HeroSection = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-lg-6">
+            {/* <div className="col-lg-6">
               <div className="engine_image">
                 <div className="image_wrap_1">
                   <img src={circleEngine1} alt="Engine Image" />
@@ -77,8 +78,8 @@ const HeroSection = () => {
                 <div className="image_wrap_4">
                   <img src={circleEngine4} alt="Engine Image" />
                 </div>
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
           </div>
         </div>
 

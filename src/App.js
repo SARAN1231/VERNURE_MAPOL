@@ -14,7 +14,7 @@ import BlogSection from "./components/Blogs";
 import TeamPage from "./components/Leadership";
 import Bussiness from "./components/Bussiness";
 import ServiceDetailsPage from "./components/ServiceDetails";
-
+// import "./bootstrap/dist/js/bootstrap";
 import CaseStudies from "./components/CaseStudies";
 import CaseStudiesDetails from "./components/CaseStudiesDetails";
 import SuccessStories from "./components/SuccessStories";
