@@ -111,7 +111,7 @@ const AboutAndCaseSection = () => {
                   About Us
                 </div>
                 <h2 className="heading_text">
-                  Techco <mark>Mission & Goal</mark>
+                  Mapol <mark>Mission & Goal</mark>
                 </h2>
                 <p className="heading_description mb-0">
                   At Techco, our mission is to empower businesses through

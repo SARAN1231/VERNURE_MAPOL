@@ -1,6 +1,13 @@
 import React from 'react'
 import "../../node_modules/bootstrap/dist/js/bootstrap"
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
+import { Link } from 'react-router-dom'
+import SwiperCore, { Navigation } from "swiper";
 
+// Install Swiper modules
+SwiperCore.use([Navigation]);
 function Technologies() {
   return (
     <>
@@ -199,10 +206,7 @@ function Technologies() {
           </div>
           <div className="section_space">
             <div className="heading_block text-center">
-              <div
-                className="heading_focus_text has_underline d-inline-flex"
-               
-              >
+              <div className="heading_focus_text has_underline d-inline-flex">
                 Our Technologies
               </div>
               <h2 className="heading_text mb-0">
@@ -438,7 +442,11 @@ function Technologies() {
                     </div>
                   </div>
                 </div>
-                <div className="tab-pane fade" id="tab_databases" role="tabpanel">
+                <div
+                  className="tab-pane fade"
+                  id="tab_databases"
+                  role="tabpanel"
+                >
                   <div className="web_development_technologies row justify-content-center">
                     <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                       <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
@@ -697,7 +705,11 @@ function Technologies() {
                     </div>
                   </div>
                 </div>
-                <div className="tab-pane fade" id="tab_mobile_apps" role="tabpanel">
+                <div
+                  className="tab-pane fade"
+                  id="tab_mobile_apps"
+                  role="tabpanel"
+                >
                   <div className="web_development_technologies row justify-content-center">
                     <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                       <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
@@ -810,7 +822,7 @@ function Technologies() {
                   id="tab_other_frameworks"
                   role="tabpanel"
                 >
-                <div className="web_development_technologies row justify-content-center">
+                  <div className="web_development_technologies row justify-content-center">
                     <div className="col-lg-2 col-md-3 col-sm-4 col-6">
                       <div className="iconbox_block text-center p-0 shadow-none bg-transparent">
                         <div className="iconbox_icon">
@@ -947,7 +959,7 @@ function Technologies() {
                       <div className="icon">
                         <img
                           src="./images/icons/icon_g2.svg"
-                          alt="C SVG Icon"
+                          alt="G2 SVG Icon"
                         />
                       </div>
                       <ul className="rating_block unordered_list">
@@ -977,167 +989,171 @@ function Technologies() {
             </div>
             <div className="col-lg-8">
               <div className="review_onecol_wrapper">
-                <div className="review_onecol_carousel swiper">
-                  <div className="swiper-wrapper">
-                    <div className="swiper-slide">
-                      <div className="review_block_2">
-                        <h3 className="review_title">
-                          “Amazing software services”
-                        </h3>
-                        <p className="review_commtent">
-                          The solutions they're providing is helping our
-                          business run more smoothly. We've been able to make
-                          quick developments with them, meeting our product
-                          vision within the timeline we set up. Listen to them
-                          because they can give strong advice about how to build
-                          good products.
-                        </p>
-                        <div className="d-md-flex justify-content-md-between">
-                          <div className="review_admin">
-                            <div className="review_admin_image">
-                              <img
-                                src="./images/avatar/avatar_5.webp"
-                                alt="Maverick Phoenix"
-                              />
-                            </div>
-                            <div className="review_admin_info">
-                              <h4 className="review_admin_name">
-                                Maverick Phoenix
-                              </h4>
-                              <span className="review_admin_designation">
-                                Board Member, UNIQA
-                              </span>
-                              <div className="review_admin_country">
-                                <span className="country_flag">
-                                  <img
-                                    src="./images/flag/ukraine_flag.webp"
-                                    alt="Ukraine Flag"
-                                  />
-                                </span>
-                                <span className="country_text">
-                                  Seattle, Ukraine
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="review_admin_logo">
+                <Swiper
+                  spaceBetween={30}
+                  navigation={{
+                    nextEl: ".r1cc-swiper-button-next",
+                    prevEl: ".r1cc-swiper-button-prev",
+                  }}
+                >
+                  <SwiperSlide>
+                    <div className="review_block_2">
+                      <h3 className="review_title">
+                        “Amazing software services”
+                      </h3>
+                      <p className="review_commtent">
+                        The solutions they're providing is helping our business
+                        run more smoothly. We've been able to make quick
+                        developments with them, meeting our product vision
+                        within the timeline we set up. Listen to them because
+                        they can give strong advice about how to build good
+                        products.
+                      </p>
+                      <div className="d-md-flex justify-content-md-between">
+                        <div className="review_admin">
+                          <div className="review_admin_image">
                             <img
-                              src="./images/clients/client_logo_8.webp"
-                              alt="Review Admin Logo"
+                              src="./images/avatar/avatar_5.webp"
+                              alt="Maverick Phoenix"
                             />
                           </div>
+                          <div className="review_admin_info">
+                            <h4 className="review_admin_name">
+                              Maverick Phoenix
+                            </h4>
+                            <span className="review_admin_designation">
+                              Board Member, UNIQA
+                            </span>
+                            <div className="review_admin_country">
+                              <span className="country_flag">
+                                <img
+                                  src="./images/flag/ukraine_flag.webp"
+                                  alt="Ukraine Flag"
+                                />
+                              </span>
+                              <span className="country_text">
+                                Seattle, Ukraine
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="review_admin_logo">
+                          <img
+                            src="./images/clients/client_logo_8.webp"
+                            alt="Review Admin Logo"
+                          />
                         </div>
                       </div>
                     </div>
-                    <div className="swiper-slide">
-                      <div className="review_block_2">
-                        <h3 className="review_title">
-                          “Amazing software services”
-                        </h3>
-                        <p className="review_commtent">
-                          The solutions they're providing is helping our
-                          business run more smoothly. We've been able to make
-                          quick developments with them, meeting our product
-                          vision within the timeline we set up. Listen to them
-                          because they can give strong advice about how to build
-                          good products.
-                        </p>
-                        <div className="d-md-flex justify-content-md-between">
-                          <div className="review_admin">
-                            <div className="review_admin_image">
-                              <img
-                                src="./images/avatar/avatar_6.webp"
-                                alt="Maverick Phoenix"
-                              />
-                            </div>
-                            <div className="review_admin_info">
-                              <h4 className="review_admin_name">
-                                Maverick Phoenix
-                              </h4>
-                              <span className="review_admin_designation">
-                                Board Member, UNIQA
-                              </span>
-                              <div className="review_admin_country">
-                                <span className="country_flag">
-                                  <img
-                                    src="./images/flag/ukraine_flag.webp"
-                                    alt="Ukraine Flag"
-                                  />
-                                </span>
-                                <span className="country_text">
-                                  Seattle, Ukraine
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="review_admin_logo">
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="review_block_2">
+                      <h3 className="review_title">
+                        “Amazing software services”
+                      </h3>
+                      <p className="review_commtent">
+                        The solutions they're providing is helping our business
+                        run more smoothly. We've been able to make quick
+                        developments with them, meeting our product vision
+                        within the timeline we set up. Listen to them because
+                        they can give strong advice about how to build good
+                        products.
+                      </p>
+                      <div className="d-md-flex justify-content-md-between">
+                        <div className="review_admin">
+                          <div className="review_admin_image">
                             <img
-                              src="./images/clients/client_logo_8.webp"
-                              alt="Review Admin Logo"
+                              src="./images/avatar/avatar_6.webp"
+                              alt="Maverick Phoenix"
                             />
                           </div>
+                          <div className="review_admin_info">
+                            <h4 className="review_admin_name">
+                              Maverick Phoenix
+                            </h4>
+                            <span className="review_admin_designation">
+                              Board Member, UNIQA
+                            </span>
+                            <div className="review_admin_country">
+                              <span className="country_flag">
+                                <img
+                                  src="./images/flag/ukraine_flag.webp"
+                                  alt="Ukraine Flag"
+                                />
+                              </span>
+                              <span className="country_text">
+                                Seattle, Ukraine
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="review_admin_logo">
+                          <img
+                            src="./images/clients/client_logo_8.webp"
+                            alt="Review Admin Logo"
+                          />
                         </div>
                       </div>
                     </div>
-                    <div className="swiper-slide">
-                      <div className="review_block_2">
-                        <h3 className="review_title">
-                          “Amazing software services”
-                        </h3>
-                        <p className="review_commtent">
-                          The solutions they're providing is helping our
-                          business run more smoothly. We've been able to make
-                          quick developments with them, meeting our product
-                          vision within the timeline we set up. Listen to them
-                          because they can give strong advice about how to build
-                          good products.
-                        </p>
-                        <div className="d-md-flex justify-content-md-between">
-                          <div className="review_admin">
-                            <div className="review_admin_image">
-                              <img
-                                src="./images/avatar/avatar_7.webp"
-                                alt="Maverick Phoenix"
-                              />
-                            </div>
-                            <div className="review_admin_info">
-                              <h4 className="review_admin_name">
-                                Maverick Phoenix
-                              </h4>
-                              <span className="review_admin_designation">
-                                Board Member, UNIQA
-                              </span>
-                              <div className="review_admin_country">
-                                <span className="country_flag">
-                                  <img
-                                    src="./images/flag/ukraine_flag.webp"
-                                    alt="Ukraine Flag"
-                                  />
-                                </span>
-                                <span className="country_text">
-                                  Seattle, Ukraine
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="review_admin_logo">
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="review_block_2">
+                      <h3 className="review_title">
+                        “Amazing software services”
+                      </h3>
+                      <p className="review_commtent">
+                        The solutions they're providing is helping our business
+                        run more smoothly. We've been able to make quick
+                        developments with them, meeting our product vision
+                        within the timeline we set up. Listen to them because
+                        they can give strong advice about how to build good
+                        products.
+                      </p>
+                      <div className="d-md-flex justify-content-md-between">
+                        <div className="review_admin">
+                          <div className="review_admin_image">
                             <img
-                              src="./images/clients/client_logo_8.webp"
-                              alt="Review Admin Logo"
+                              src="./images/avatar/avatar_7.webp"
+                              alt="Maverick Phoenix"
                             />
                           </div>
+                          <div className="review_admin_info">
+                            <h4 className="review_admin_name">
+                              Maverick Phoenix
+                            </h4>
+                            <span className="review_admin_designation">
+                              Board Member, UNIQA
+                            </span>
+                            <div className="review_admin_country">
+                              <span className="country_flag">
+                                <img
+                                  src="./images/flag/ukraine_flag.webp"
+                                  alt="Ukraine Flag"
+                                />
+                              </span>
+                              <span className="country_text">
+                                Seattle, Ukraine
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="review_admin_logo">
+                          <img
+                            src="./images/clients/client_logo_8.webp"
+                            alt="Review Admin Logo"
+                          />
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="carousel_arrows_nav">
-                    <button type="button" className="r1cc-swiper-button-prev">
-                      <i className="fa-solid fa-arrow-left"></i>
-                    </button>
-                    <button type="button" className="r1cc-swiper-button-next">
-                      <i className="fa-solid fa-arrow-right"></i>
-                    </button>
-                  </div>
+                  </SwiperSlide>
+                </Swiper>
+                <div className="carousel_arrows_nav" >
+                  <button type="button" className="r1cc-swiper-button-prev" style={{marginTop:"30px"}}>
+                    <i className="fa-solid fa-arrow-left"></i>
+                  </button>
+                  <button type="button" className="r1cc-swiper-button-next" style={{marginLeft:"10px"}}>
+                    <i className="fa-solid fa-arrow-right"></i>
+                  </button>
                 </div>
               </div>
             </div>
