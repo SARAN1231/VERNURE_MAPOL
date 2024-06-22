@@ -1,15 +1,15 @@
 import React from "react";
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
 import "./App.css";
 import "../../node_modules/bootstrap/dist/js/bootstrap";
-
-const AboutAndCaseSection = () => {
-  
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+const Aboutus = () => {
   return (
     <section
-      className="about_and_case_section section_space section_decoration bg-dark"
+      className="about_and_case_section section_space section_decoration "
       style={{
         backgroundImage: "url('./images/backgrounds/bg_image_2.webp')",
+        backgroundColor: "#093268",
       }}
     >
       <div className="container">
@@ -25,8 +25,7 @@ const AboutAndCaseSection = () => {
               <div
                 className="about_funfact_info"
                 style={{
-                  backgroundImage:
-                    "url('./images/shapes/shape_bg_1.webp')",
+                  backgroundImage: "url('./images/shapes/shape_bg_1.webp')",
                 }}
               >
                 <div className="customer_count">
@@ -84,17 +83,11 @@ const AboutAndCaseSection = () => {
                   </span>
                 </a>
                 <div className="icon_globe">
-                  <img
-                    src="./images/icons/icon_global.svg"
-                    alt="Icon Globe"
-                  />
+                  <img src="./images/icons/icon_global.svg" alt="Icon Globe" />
                 </div>
               </div>
               <div className="space_line">
-                <img
-                  src="./images/shapes/shape_line.webp"
-                  alt="Shape Line"
-                />
+                <img src="./images/shapes/shape_line.webp" alt="Shape Line" />
               </div>
             </div>
           </div>
@@ -257,4 +250,4 @@ const CaseStudy = ({
   );
 };
 
-export default AboutAndCaseSection;
+export default Aboutus;

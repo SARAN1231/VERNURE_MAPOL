@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./App.css"
+import "../../node_modules/bootstrap/dist/js/bootstrap";
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 const FaqSection = () => {
   const [activeAccordion, setActiveAccordion] = useState(null);
 

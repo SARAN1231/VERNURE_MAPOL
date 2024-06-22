@@ -1,14 +1,15 @@
 import React from "react";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import "../../node_modules/bootstrap/dist/js/bootstrap";
+import "bootstrap";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import Mapol from "./Mapol";
+import WhyMapol3 from "./WhyMapol3";
 import "swiper/swiper-bundle.css";
 
 import "swiper/css/navigation";
-import MapolWhy from "./MapolWhy";
+
+import Whymapol2 from "./Whymapol2";
 
 const PageBannerSection = ({ background, title, subtitle }) => (
   <section
@@ -91,10 +92,7 @@ const PolicySection = () => (
         <div className="col-lg-4">
           <div className="iconbox_block">
             <div className="iconbox_icon">
-              <img
-                src="./images/icons/icon_clock.svg"
-                alt="Clock SVG Icon"
-              />
+              <img src="./images/icons/icon_clock.svg" alt="Clock SVG Icon" />
             </div>
             <div className="iconbox_content">
               <h3 className="iconbox_title">Our History</h3>
@@ -126,10 +124,7 @@ const PolicySection = () => (
         <div className="col-lg-4">
           <div className="iconbox_block">
             <div className="iconbox_icon bg-secondary-subtle">
-              <img
-                src="./images/icons/icon_target.svg"
-                alt="Target SVG Icon"
-              />
+              <img src="./images/icons/icon_target.svg" alt="Target SVG Icon" />
             </div>
             <div className="iconbox_content">
               <h3 className="iconbox_title">Our Vision</h3>
@@ -149,9 +144,6 @@ const PolicySection = () => (
 const ClientLogoSection = ({ clientLogos }) => (
   <section className="client_logo_section section_space">
     <div className="container">
-    
-     
-     
       <div className="row funfact_wrapper">
         <div className="col-lg-8">
           <div className="row">
@@ -198,10 +190,7 @@ const FunFact = ({ icon, value, text }) => (
   <div className="col-md-6">
     <div className="funfact_block">
       <div className="funfact_icon">
-        <img
-          src={`./images/icons/${icon}`}
-          alt={`Techco - SVG Icon ${text}`}
-        />
+        <img src={`./images/icons/${icon}`} alt={`Techco - SVG Icon ${text}`} />
       </div>
       <div className="funfact_content">
         <div className="counter_value">
@@ -216,8 +205,8 @@ const FunFact = ({ icon, value, text }) => (
   </div>
 );
 
-const Whymapol = () => {
-     const clientLogos = [
+const Whymapol1 = () => {
+  const clientLogos = [
     "./images/clients/client_logo_1.webp",
     "./images/clients/client_logo_2.webp",
     "./images/clients/client_logo_3.webp",
@@ -227,8 +216,6 @@ const Whymapol = () => {
     "./images/clients/client_logo_7.webp",
     // Add more logos as needed
   ];
-  
-    
 
   return (
     <main className="page_content">
@@ -241,10 +228,10 @@ const Whymapol = () => {
       <IntroAboutSection />
       <PolicySection />
       <ClientLogoSection clientLogos={clientLogos} />
-      <MapolWhy />
-      <Mapol />
+      <Whymapol2 />
+      <WhyMapol3 />
       <Footer />
     </main>
   );
 };
-export default Whymapol;
+export default Whymapol1;

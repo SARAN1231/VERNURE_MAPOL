@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import "../../node_modules/bootstrap/dist/js/bootstrap";
+import "bootstrap";
 
-const ServicesSection = () => {
+const Our_Services = () => {
   return (
     <section className="service_section pt-175 pb-80 bg-light section_decoration xb-hidden">
       <div className="container">
@@ -133,4 +133,4 @@ const ServicesSection = () => {
   );
 };
 
-export default ServicesSection;
+export default Our_Services;

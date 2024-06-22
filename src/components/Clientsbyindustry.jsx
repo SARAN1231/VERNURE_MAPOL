@@ -3,7 +3,9 @@ import "swiper/swiper-bundle.css";
 import Swiper from "swiper";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-
+import "./App.css";
+import "../../node_modules/bootstrap/dist/js/bootstrap";
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 const Clientsbyindustry = () => {
   return (
     <div>

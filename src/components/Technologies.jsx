@@ -1,11 +1,12 @@
 import React from 'react'
-import "../../node_modules/bootstrap/dist/js/bootstrap"
+import "../../node_modules/bootstrap/dist/js/bootstrap";
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 import { Link } from 'react-router-dom'
 import SwiperCore, { Navigation } from "swiper";
-
+import "./App.css";
 // Install Swiper modules
 SwiperCore.use([Navigation]);
 function Technologies() {

@@ -72,7 +72,7 @@
   --bs-body-color-rgb: 73, 81, 91;
   --bs-primary: #0044EB;
   --bs-secondary: #F44380;
-  --bs-dark: #020842;
+  --bs-dark: #093268;
   --bs-light: #E3F0FF;
   --bs-info: #23BABF;
   --bs-warning: #F3A338;
@@ -1968,7 +1968,8 @@ input[type=search]::-webkit-search-results-decoration {
   .mobile_menu_btn:hover {
     color: var(--bs-white);
     border-color: var(--bs-primary);
-    background-color: var(--bs-primary); }
+    background-color: var(--bs-primary);
+   }
 
 @media screen and (max-width: 991px) {
   .site_header .main_menu {
@@ -1995,7 +1996,8 @@ input[type=search]::-webkit-search-results-decoration {
     max-width: 700px;
     border-radius: 10px;
     background-color: var(--bs-white);
-    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.12); }
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.12); 
+  }
 
   .main_menu_list > li > a {
     width: 100%;

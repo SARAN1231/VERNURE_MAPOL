@@ -1,5 +1,7 @@
 import React from "react";
 import "./App.css"
+import "../../node_modules/bootstrap/dist/js/bootstrap";
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 const ContactSection = () => {
   return (
     <section className="contact_section pb-80 bg-light section_decoration">
@@ -24,11 +26,11 @@ const ContactSection = () => {
               </div>
               <ul className="contact_method_list unordered_list_block">
                 <li>
-                  <a href="tel:+8801680636189">
+                  <a href="tel:+91 44-4555-6177">
                     <span className="icon">
                       <i className="fa-solid fa-phone-volume"></i>
                     </span>
-                    <span className="text">+880-1680-6361-89</span>
+                    <span className="text">+91 44-4555-6177</span>
                   </a>
                 </li>
                 <li>
@@ -36,7 +38,7 @@ const ContactSection = () => {
                     <span className="icon">
                       <i className="fa-solid fa-envelope"></i>
                     </span>
-                    <span className="text">Techco@gmail.com</span>
+                    <span className="text"> info@mapolgroup.com </span>
                   </a>
                 </li>
                 <li>
@@ -44,7 +46,7 @@ const ContactSection = () => {
                     <span className="icon">
                       <i className="fa-solid fa-location-dot"></i>
                     </span>
-                    <span className="text">Sunshine Business Park</span>
+                    <span className="text">Teynampet, Chennai-600018</span>
                   </a>
                 </li>
               </ul>

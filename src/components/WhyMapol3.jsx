@@ -1,6 +1,8 @@
 import React from "react";
-
-const ServiceAndCallToActionSection = () => (
+import "./App.css";
+import "bootstrap";
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+const WhyMapol3 = () => (
   <main>
     <section className="service_section section_space bg-light">
       <div className="container">
@@ -96,4 +98,4 @@ const ServiceItem = ({ icon, title }) => (
   </li>
 );
 
-export default ServiceAndCallToActionSection;
+export default WhyMapol3;

@@ -1,14 +1,14 @@
 import React from "react";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import "../../node_modules/bootstrap/dist/js/bootstrap";
+import "bootstrap";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
-const TeamPage = () => {
+const LeadershipTeam = () => {
   return (
     <main className="page_content">
-        <Navbar/>
+      <Navbar />
 
       <section
         className="page_banner_section text-center"
@@ -214,9 +214,9 @@ const TeamPage = () => {
           </a>
         </div>
       </section>
-        <Footer />
+      <Footer />
     </main>
   );
 };
 
-export default TeamPage;
+export default LeadershipTeam;

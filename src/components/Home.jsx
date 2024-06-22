@@ -1,17 +1,17 @@
-import React from 'react'
-import HeroSection from './Hero';
-import ServicesSection from './Services';
-import Marquees from './Marquees';
-import AboutAndCaseSection from './Aboutus';
-import Technologies from './Technologies';
-import FaqSection from './Faqsection';
-import ContactSection from './ContactUs';
-import Footer from './Footer';
-import Navbar from './Navbar';
+import React from "react";
+import HeroSection from "./Hero";
+import OurServices from "./Our_Services";
+import OurClients from "./Our_Clients";
+import Aboutus from "./Aboutus";
+import Technologies from "./Technologies";
+import FaqSection from "./Faqsection";
+import ContactSection from "./ContactUs";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
 import "../../node_modules/bootstrap/dist/js/bootstrap";
-import Particles from './Particles';
+import Particles from "./Particles";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-
+import "./App.css";
 
 const Home = () => {
   return (
@@ -20,19 +20,16 @@ const Home = () => {
           <Particles/>
         </div> */}
       <Navbar />
-
       <HeroSection />
-
-      <ServicesSection />
-      <Marquees />
-      <AboutAndCaseSection />
+      <OurServices />
+      <OurClients />
+      <Aboutus />
       <Technologies />
       <FaqSection />
-      
       <ContactSection />
       <Footer />
     </div>
   );
-}
+};
 
-export default Home
+export default Home;

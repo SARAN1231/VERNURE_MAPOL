@@ -3,7 +3,7 @@ import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import "../../node_modules/bootstrap/dist/js/bootstrap";
 import Clientswiper from "./Clientswiper";
-import Marquees from "./Marquees";
+import OurClients from "./Our_Clients";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Container } from "react-bootstrap";
@@ -27,7 +27,7 @@ const SuccessStories = () => {
         </Container>
       </section>
       <Clientswiper />
-      <Marquees />
+      <OurClients />
       <BusinessConsultingService />
 
       <Footer />

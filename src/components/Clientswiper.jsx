@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import Swiper, { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/swiper-bundle.min.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "../../node_modules/bootstrap/dist/js/bootstrap";
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 Swiper.use([Autoplay, Pagination, Navigation]);

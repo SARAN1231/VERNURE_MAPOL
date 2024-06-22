@@ -4,7 +4,8 @@ import "swiper/swiper-bundle.css"
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
 import SwiperCore, { Autoplay, Navigation } from "swiper";
-
+import "../../node_modules/bootstrap/dist/js/bootstrap";
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 SwiperCore.use([Autoplay, Navigation]);
 
@@ -183,10 +184,22 @@ function Footer() {
 
             <ul className="social_icons_block unordered_list">
               {[
-                { href: "#!", icon: "fa-facebook-f" },
-                { href: "#!", icon: "fa-twitter" },
-                { href: "#!", icon: "fa-linkedin-in" },
-                { href: "#!", icon: "fa-youtube" },
+                {
+                  href: "https://www.facebook.com/mapolbs/?ref=hl",
+                  icon: "fa-facebook-f",
+                },
+                {
+                  href: "https://twitter.com/balakannan_r",
+                  icon: "fa-twitter",
+                },
+                {
+                  href: "https://www.linkedin.com/company/mapol-business-solutions-private-limited/",
+                  icon: "fa-linkedin-in",
+                },
+                {
+                  href: "https://plus.google.com/u/0/108740517297471267788/posts",
+                  icon: "fa-google-plus",
+                },
               ].map((social, index) => (
                 <li key={index}>
                   <a href={social.href}>

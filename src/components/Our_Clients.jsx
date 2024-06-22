@@ -1,7 +1,9 @@
 import React from "react";
 import styled, { keyframes, css } from "styled-components";
-
-function Marquees() {
+import "./App.css";
+import "bootstrap";
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+function Our_Clients() {
   const row1 = [
     "https://www.filepicker.io/api/file/zHuNTzcS76RfMr9gOUWq",
     "https://seeklogo.com/images/A/asahi-india-logo-428D2838CA-seeklogo.com.png",
@@ -10,7 +12,6 @@ function Marquees() {
     "https://cdn.worldvectorlogo.com/logos/fag-1.svg",
     "https://upload.wikimedia.org/wikipedia/commons/2/24/Logo_de_Faurecia.svg",
     "data:image/png;base64,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",
-    
   ];
 
   const row2 = [
@@ -25,10 +26,24 @@ function Marquees() {
 
   return (
     <AppContainer>
-     
       <Wrapper>
-        <Text className="mb-100">Our Clients.</Text>
-        <Note>Our customers have gotten offers from awesome companies.</Note>
+        {/* <Text className="mb-100">Our Clients</Text>
+        <Note>Our customers have gotten offers from awesome companies.</Note> */}
+        <div className="heading_block text-center">
+          <div
+            className="heading_focus_text has_underline d-inline-flex"
+            style={{
+              backgroundImage:
+                'url("./images/shapes/shape_title_under_line.svg")',
+            }}
+          >
+            Our Clients
+          </div>
+          <h2 className="heading_text mb-0">
+            Our customers have gotten offers from{" "}
+            <mark> awesome companies.</mark>
+          </h2>
+        </div>
         <Marquee>
           <MarqueeGroup>
             {row1.map((el) => (
@@ -66,13 +81,13 @@ function Marquees() {
   );
 }
 
-export default Marquees;
+export default Our_Clients;
 
 const AppContainer = styled.div`
   width: 100vw;
   height: 100vh;
   color: #000000;
-  overflow-x:"hidden";
+  overflow-x: "hidden";
   position: relative;
   display: flex;
   align-items: center;

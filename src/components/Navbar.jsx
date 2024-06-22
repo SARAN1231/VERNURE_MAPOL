@@ -1,16 +1,71 @@
-import React, { useState } from "react";
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import React, { useEffect, useState } from "react";
 import "./App.css"
-import "../../node_modules/bootstrap/dist/js/bootstrap";
 import { Link } from "react-router-dom";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import bootstrapBundleMin from "bootstrap/dist/js/bootstrap.bundle.min";
 
 function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
+   const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleClick = () => {
-    setMenuOpen(!menuOpen);
-  };
+   const handleClick = () => {
+     setMenuOpen(!menuOpen);
+   };
+
+   useEffect(() => {
+     const dropdowns = document.querySelectorAll(".dropdown");
+     dropdowns.forEach((dropdown) => {
+       dropdown.addEventListener("hide.bs.dropdown", handleDropdownHide);
+     });
+
+     const hoverDropdowns = document.querySelectorAll(
+       ".dropdown-hover, .dropdown-hover-all .dropdown"
+     );
+     hoverDropdowns.forEach((dropdown) => {
+       dropdown.addEventListener("mouseenter", handleMouseEnter);
+       dropdown.addEventListener("mouseleave", handleMouseLeave);
+     });
+
+     return () => {
+       dropdowns.forEach((dropdown) => {
+         dropdown.removeEventListener("hide.bs.dropdown", handleDropdownHide);
+       });
+
+       hoverDropdowns.forEach((dropdown) => {
+         dropdown.removeEventListener("mouseenter", handleMouseEnter);
+         dropdown.removeEventListener("mouseleave", handleMouseLeave);
+       });
+     };
+   }, []);
+
+   const handleDropdownHide = (event) => {
+     const target = event.target;
+     if (target.classList.contains("has-child-dropdown-show")) {
+       target.classList.remove("has-child-dropdown-show");
+       event.preventDefault();
+     }
+     event.stopPropagation();
+   };
+
+   const handleMouseEnter = (event) => {
+     const dropdown = event.target.querySelector(
+       ':scope>[data-bs-toggle="dropdown"]'
+     );
+     if (dropdown && !dropdown.classList.contains("show")) {
+       new window.bootstrap.Dropdown(dropdown).toggle();
+       event.target.classList.add("has-child-dropdown-show");
+       window.bootstrap.Dropdown.clearMenus();
+     }
+   };
+
+   const handleMouseLeave = (event) => {
+     const dropdown = event.target.querySelector(
+       ':scope>[data-bs-toggle="dropdown"]'
+     );
+     if (dropdown && dropdown.classList.contains("show")) {
+       new window.bootstrap.Dropdown(dropdown).toggle();
+     }
+   };
   return (
     <>
       {/* <Preloader /> */}
@@ -44,7 +99,11 @@ function Navbar() {
                     <img
                       src="./images/Mapol/mapol-logo-lg.png"
                       alt="Mapol Logo"
-                      style={{ width: "250px", height: "100px",marginLeft:"30px" }}
+                      style={{
+                        width: "250px",
+                        height: "100px",
+                        marginLeft: "30px",
+                      }}
                     />
                     {/* <img src="../../public/images/Mapol/mapol-logo-lg.png" alt="" /> */}
 
@@ -269,29 +328,29 @@ function Navbar() {
                                     data-text="Follow Us:"
                                   >
                                     <li>
-                                      <a href="#!">
+                                      <a href="https://www.facebook.com/mapolbs/?ref=hl">
                                         <i className="fa-brands fa-facebook-f"></i>
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="#!">
+                                      <a href="https://twitter.com/balakannan_r">
                                         <i className="fa-brands fa-twitter"></i>
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="#!">
+                                      <a href="https://www.linkedin.com/company/mapol-business-solutions-private-limited/">
                                         <i className="fa-brands fa-linkedin-in"></i>
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="#!">
-                                        <i className="fa-brands fa-dribbble"></i>
+                                      <a href="https://plus.google.com/u/0/108740517297471267788/posts">
+                                        <i className="fa-brands fa-google-plus"></i>
                                       </a>
                                     </li>
                                   </ul>
                                   <p className="career_link m-0">
                                     Looking for new career?{" "}
-                                    <a href="#!">We’re Hiring</a>
+                                    <Link to={"/Careers"}>We’re Hiring</Link>
                                   </p>
                                 </div>
                               </div>
@@ -521,9 +580,9 @@ function Navbar() {
                                 </div>
                                 <ul className="btns_group p-0 unordered_list justify-content-start">
                                   <li>
-                                    <a
+                                    <Link
                                       className="btn btn-primary"
-                                      href="contact.html"
+                                      to={"/contact"}
                                     >
                                       <span
                                         className="btn_label"
@@ -534,7 +593,7 @@ function Navbar() {
                                       <span className="btn_icon">
                                         <i className="fa-solid fa-arrow-up-right"></i>
                                       </span>
-                                    </a>
+                                    </Link>
                                   </li>
                                   <li>
                                     <div className="review_short_info_2">
@@ -656,10 +715,10 @@ function Navbar() {
                           aria-labelledby="portfolio_submenu"
                         >
                           <li>
-                            <a href="portfolio.html">Industry 4.0</a>
+                            <Link to={"/Industry4"}>Industry 4.0</Link>
                           </li>
                           <li>
-                            <a href="portfolio_details.html">Sustainability</a>
+                            <Link to={"/Sustainability"}>Sustainability</Link>
                           </li>
                           <li>
                             <Link to={"/Casestudies"}>Case Studies</Link>
@@ -751,12 +810,12 @@ function Navbar() {
                           </li>
 
                           <li>
-                            <a href="#!">
-                              Careers{" "}
+                            <Link to={"/Careers"}>
+                              Careers
                               <small className="badge bg-danger-subtle text-danger">
                                 We’re Hiring
                               </small>
-                            </a>
+                            </Link>
                           </li>
                           <li>
                             <Link to="/contact">Contact Us</Link>
@@ -790,14 +849,14 @@ function Navbar() {
                     </button>
                   </li>
                   <li>
-                    <a className="btn btn-primary" href="pricing.html">
+                    <Link className="btn btn-primary" to="/contact">
                       <span className="btn_label" data-text="Get Started">
                         Get Started
                       </span>
                       <span className="btn_icon">
                         <i className="fa-solid fa-arrow-up-right"></i>
                       </span>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

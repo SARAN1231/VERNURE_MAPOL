@@ -5,7 +5,7 @@ import "swiper/swiper-bundle.css";
 
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import "../../node_modules/bootstrap/dist/js/bootstrap";
+import "bootstrap";
 SwiperCore.use([Navigation]);
 
 const TeamMember = ({ name, designation, imageUrl }) => (
@@ -67,7 +67,7 @@ const TeamMember = ({ name, designation, imageUrl }) => (
   </div>
 );
 
-const MapolWhy = () => (
+const Whymapol2 = () => (
   <section className="team_section section_space xb-hidden">
     <div className="container">
       <div className="heading_block text-center">
@@ -150,4 +150,4 @@ const MapolWhy = () => (
   </section>
 );
 
-export default MapolWhy;
+export default Whymapol2;
