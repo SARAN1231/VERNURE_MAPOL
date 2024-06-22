@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/VERNURE_MAPOL/static/css/main.edd39b1d.css",
+    "main.js": "/VERNURE_MAPOL/static/js/main.2f7e4b33.js",
+    "static/media/fa-regular-400.ttf": "/VERNURE_MAPOL/static/media/fa-regular-400.1fb710c67dcecf785a61.ttf",
+    "static/media/fa-solid-900.ttf": "/VERNURE_MAPOL/static/media/fa-solid-900.866bbb7a13a33d21b363.ttf",
+    "static/media/circle_engine_2.webp": "/VERNURE_MAPOL/static/media/circle_engine_2.c1a725b3f7f22926cc36.webp",
+    "static/media/fa-brands-400.ttf": "/VERNURE_MAPOL/static/media/fa-brands-400.176a65f44a88183cf1dc.ttf",
+    "static/media/Axiforma-SemiBold.ttf": "/VERNURE_MAPOL/static/media/Axiforma-SemiBold.01a410ce5b3d658624c5.ttf",
+    "static/media/Axiforma-Bold.ttf": "/VERNURE_MAPOL/static/media/Axiforma-Bold.f1d007d67abb8b5cebd8.ttf",
+    "static/media/Axiforma-Medium.ttf": "/VERNURE_MAPOL/static/media/Axiforma-Medium.40458a15279cc1d86420.ttf",
+    "static/media/Axiforma-Regular.ttf": "/VERNURE_MAPOL/static/media/Axiforma-Regular.631a540be362d57ffac5.ttf",
+    "static/media/circle_engine_3.webp": "/VERNURE_MAPOL/static/media/circle_engine_3.9ec03a6ef0dda5efc029.webp",
+    "static/media/style.css.map": "/VERNURE_MAPOL/static/media/style.css.60f8dfe078575f32d4e1.map",
+    "static/media/shape_image_3.webp": "/VERNURE_MAPOL/static/media/shape_image_3.ef64cd77e2d47a683564.webp",
+    "static/media/shape_image_4.webp": "/VERNURE_MAPOL/static/media/shape_image_4.7cff8112270c84d346dd.webp",
+    "static/media/shape_image_2.webp": "/VERNURE_MAPOL/static/media/shape_image_2.cb5480aa3142b32f3077.webp",
+    "static/media/circle_engine_4.png": "/VERNURE_MAPOL/static/media/circle_engine_4.e875f410a99b76c5cc9d.png",
+    "static/media/shape_polygon.webp": "/VERNURE_MAPOL/static/media/shape_polygon.ef7d0c80da8167dd8fed.webp",
+    "static/media/shape_image_1.webp": "/VERNURE_MAPOL/static/media/shape_image_1.8c7463c1eab865ee149d.webp",
+    "static/media/circle_engine_1.webp": "/VERNURE_MAPOL/static/media/circle_engine_1.41a566c9c404c6c0c8dc.webp",
+    "static/media/business_consulting_hero_image_1.webp": "/VERNURE_MAPOL/static/media/business_consulting_hero_image_1.e0d47bbed6e85d3375c4.webp",
+    "index.html": "/VERNURE_MAPOL/index.html",
+    "main.edd39b1d.css.map": "/VERNURE_MAPOL/static/css/main.edd39b1d.css.map",
+    "main.2f7e4b33.js.map": "/VERNURE_MAPOL/static/js/main.2f7e4b33.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.edd39b1d.css",
+    "static/js/main.2f7e4b33.js"
+  ]
+}
