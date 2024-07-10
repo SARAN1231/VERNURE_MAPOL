@@ -26,6 +26,7 @@ import Industry4 from "./components/Industry4";
 import Sustainability from "./Sustainability";
 import OurPartners from "./components/OurPartners";
 import NotFoundPage from "./components/NotFoundPage";
+import ErpForlogistics from "./components/Products/ErpForlogistics";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
         <Route path="/Sustainability" element={<Sustainability />} />
         <Route path="/OurPartners" element={<OurPartners />} />
         <Route path="*" element={<NotFoundPage />} />
+        <Route path="/ERP-Logistics" element={<ErpForlogistics />} />
       </Routes>
     </div>
   );

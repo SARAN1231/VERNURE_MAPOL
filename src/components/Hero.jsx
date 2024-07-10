@@ -1,22 +1,30 @@
 import React from "react";
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
-import "./App.css"
-// import shapeTitleUnderline from "./images/shapes/shape_title_under_line.svg";
-import background from "../assets/images/hero/business_consulting_hero_image_1.webp"
-import circleEngine1 from "../assets/images/hero/circle_engine_1.webp";
-import circleEngine2 from "../assets/images/hero/circle_engine_2.webp";
-import circleEngine3 from "../assets/images/hero/circle_engine_3.webp";
-import circleEngine4 from "../assets/images/hero/circle_engine_4.png";
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import { Link } from "react-router-dom";
+
+// Importing images
 import shapeImage1 from "../assets/images/hero/shape_image_1.webp";
 import shapeImage2 from "../assets/images/hero/shape_image_2.webp";
 import shapeImage3 from "../assets/images/hero/shape_image_3.webp";
 import shapeImage4 from "../assets/images/hero/shape_image_4.webp";
-import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
     <main className="page_content">
-      <section className="software_company_hero_section xb-hidden">
+      <section
+        className="software_company_hero_section xb-hidden "
+        style={{
+          backgroundImage: "url('./images/backgrounds/bg_image_2.webp')",
+          backgroundColor: "#093268",
+        }}
+      >
+        {/* <div className="video-background">
+          <video autoPlay muted loop>
+            <source src="/video3.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div> */}
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
@@ -130,96 +138,10 @@ const HeroSection = () => {
                 </li>
               </ul>
             </div>
-            {/* <div className="col-lg-6">
-            <div className="engine_image">
-                <div className="image_wrap_1">
-                  <img src={circleEngine1} alt="Engine Image" />
-                </div>
-                <div className="image_wrap_2">
-                  <img src={circleEngine2} alt="Engine Image" />
-                </div>
-                <div className="image_wrap_3">
-                  <img src={circleEngine3} alt="Engine Image" />
-                </div>
-                <div className="image_wrap_4">
-                  <img src={circleEngine4} alt="Engine Image" />
-                </div>
-              </div>
-
-            </div>
-            <div className="col-lg-6">
-              <div className="business_consulting_hero_image">
-                <img
-                  className="hero_image"
-                  src={background}
-                  alt="Business Consulting"
-                   
-                />
-
-                <div
-                  className="funfact_block capsule_layout wow fadeInUp"
-                  data-wow-delay=".1s"
-                >
-                  <div className="funfact_content">
-                    <div className="counter_value">
-                      <span className="odometer" data-count="22">
-                        0
-                      </span>
-                      <span>M+</span>
-                    </div>
-                    <h3 className="funfact_title mb-0">Happy Customer</h3>
-                  </div>
-                  <div className="funfact_icon">
-                    <img
-                      src="./images/icons/icon_user_3.svg"
-                      alt="Techco - SVG Icon User"
-                    />
-                  </div>
-                </div>
-
-                <div
-                  className="funfact_block capsule_layout wow fadeInUp"
-                  data-wow-delay=".2s"
-                >
-                  <div className="funfact_icon">
-                    <img
-                      src="./images/icons/icon_wallet.svg"
-                      alt="Techco - SVG Icon Wallet"
-                    />
-                  </div>
-                  <div className="funfact_content">
-                    <h3 className="funfact_title mb-0">Company Value</h3>
-                    <div className="counter_value">
-                      <span>$</span>
-                      <span className="odometer" data-count="500000">
-                        0
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  className="funfact_block capsule_layout wow fadeInUp"
-                  data-wow-delay=".3s"
-                >
-                  <div className="funfact_content pt-2 pb-1">
-                    <h3 className="funfact_title mb-0 text-center">
-                      Success Rate
-                    </h3>
-                    <div className="counter_value justify-content-center">
-                      <span className="odometer" data-count="98">
-                        0
-                      </span>
-                      <span>%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
 
-        <div className="shape_image_1">
+        {/* <div className="shape_image_1">
           <img src={shapeImage1} alt="Engine Image" />
         </div>
         <div className="shape_image_2">
@@ -230,7 +152,7 @@ const HeroSection = () => {
         </div>
         <div className="shape_image_4">
           <img src={shapeImage4} alt="Engine Image" />
-        </div>
+        </div> */}
       </section>
     </main>
   );

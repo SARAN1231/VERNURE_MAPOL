@@ -69,7 +69,17 @@ function Navbar() {
   return (
     <>
       {/* <Preloader /> */}
-      <header className="site_header site_header_2">
+      <header
+        className="site_header site_header_2"
+        style={{
+          backgroundColor: "#E3F0FF",
+          color: "black",
+          height: "100px",
+          position: "sticky",
+          top: "0",
+          zIndex: "1000", // Ensures it stays on top of other elements
+        }}
+      >
         <div className="header_bottom stricky">
           <div className="container">
             <div className="row align-items-center">
@@ -145,6 +155,7 @@ function Navbar() {
                           role="button"
                           data-bs-toggle="dropdown"
                           aria-expanded="false"
+                          style={{ color: "black" }}
                         >
                           Solutions
                         </a>
@@ -387,6 +398,7 @@ function Navbar() {
                           role="button"
                           data-bs-toggle="dropdown"
                           aria-expanded="false"
+                          style={{ color: "black" }}
                         >
                           Products
                         </a>
@@ -432,7 +444,7 @@ function Navbar() {
                                     <div className="col-lg-3 col-md-6">
                                       <Link
                                         className="iconbox_block_2"
-                                        to={"/Services"}
+                                        to={"/ERP-Logistics"}
                                       >
                                         <span className="icon_title_wrap">
                                           <small className="iconbox_icon">
@@ -707,6 +719,7 @@ function Navbar() {
                           role="button"
                           data-bs-toggle="dropdown"
                           aria-expanded="false"
+                          style={{ color: "black" }}
                         >
                           Resources
                         </a>
@@ -736,6 +749,7 @@ function Navbar() {
                           role="button"
                           data-bs-toggle="dropdown"
                           aria-expanded="false"
+                          style={{ color: "black" }}
                         >
                           Clients
                         </a>
@@ -764,6 +778,7 @@ function Navbar() {
                           role="button"
                           data-bs-toggle="dropdown"
                           aria-expanded="false"
+                          style={{ color: "black" }}
                         >
                           Company
                         </a>
@@ -840,6 +855,7 @@ function Navbar() {
                       aria-expanded={menuOpen}
                       aria-label="Toggle navigation"
                       onClick={handleClick}
+                      style={{ color: "black" }}
                     >
                       <i
                         className={

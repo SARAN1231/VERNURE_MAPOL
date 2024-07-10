@@ -60,6 +60,28 @@
 * - 5.05 - Home Pages
 
 */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* ensures the video is behind the content */
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures the video covers the area without stretching */
+  filter: blur(8px); /* adds a blur effect */
+}
+
+.software_company_hero_section {
+  position: relative;
+  overflow: hidden;
+}
+
 /* Table Of Content - end
 ================================================== */
 :root, [data-bs-theme=light] {
@@ -2038,7 +2060,9 @@ input[type=search]::-webkit-search-results-decoration {
       font-weight: 500;
       line-height: 17px;
       margin-bottom: 8px;
-      color: var(--bs-body-color);
+      color: var(
+        
+      );
       font-family: 'Axiforma Medium'; }
     .diract_contact_links .iconbox_block.layout_icon_left p {
       font-size: 20px;
