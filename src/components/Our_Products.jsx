@@ -1,12 +1,45 @@
-import React, { useState } from "react";
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import "bootstrap";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Our_solutions from "./Our_solutions";
+const Our_Products = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+    ],
+  };
 
-const Our_Services = () => {
   return (
     <section className="service_section pt-175 pb-80 bg-light section_decoration xb-hidden">
       <div className="container">
+      <Our_solutions />
         <div className="heading_block text-center">
           <div
             className="heading_focus_text has_underline d-inline-flex"
@@ -15,14 +48,14 @@ const Our_Services = () => {
                 'url("./images/shapes/shape_title_under_line.svg")',
             }}
           >
-            Our Services
+            Our Products
           </div>
           <h2 className="heading_text mb-0">
             How We Can <mark>Help</mark> You
           </h2>
         </div>
 
-        <div className="row">
+        <Slider {...settings}>
           {[
             {
               icon: "icon_code.svg",
@@ -115,7 +148,7 @@ const Our_Services = () => {
               </div>
             </div>
           ))}
-        </div>
+        </Slider>
       </div>
 
       {[
@@ -133,4 +166,4 @@ const Our_Services = () => {
   );
 };
 
-export default Our_Services;
+export default Our_Products;

@@ -5794,4 +5794,65 @@ Responsive For Mobile & Tablet Devices
 /* Media Screen 375px - End
 ================================================== */
 
+.btn-sm {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.review_and_about_section {
+  padding: 60px 0;
+}
+
+.review_block_3 {
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.review_admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service_icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.review_admin_info {
+  text-align: center;
+}
+
+.review_admin_name {
+  margin: 0;
+  font-weight: bold;
+}
+
+.review_admin_designation {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.review_comment {
+  margin-top: 10px;
+  font-style: italic;
+  text-align: center;
+}
+
+.heading_focus_text {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 /*# sourceMappingURL=style.css.map */

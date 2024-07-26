@@ -1,6 +1,5 @@
 import React from "react";
 import HeroSection from "./Hero";
-import OurServices from "./Our_Services";
 import OurClients from "./Our_Clients";
 import Aboutus from "./Aboutus";
 import Technologies from "./Technologies";
@@ -12,6 +11,7 @@ import "../../node_modules/bootstrap/dist/js/bootstrap";
 import Particles from "./Particles";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import Our_Products from "./Our_Products";
 
 const Home = () => {
   return (
@@ -21,7 +21,7 @@ const Home = () => {
         </div> */}
       <Navbar />
       <HeroSection />
-      <OurServices />
+      <Our_Products />
       <OurClients />
       <Aboutus />
       <Technologies />
