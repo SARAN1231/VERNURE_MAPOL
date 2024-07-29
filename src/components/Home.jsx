@@ -14,11 +14,21 @@ import "./App.css";
 import Our_Products from "./Our_Products";
 
 const Home = () => {
+  const [active , setActive] = React.useState(false);
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      setActive(true);
+    } else {
+      setActive(false);
+    }
+  });
   return (
     <div className="page_wrapper" style={{ overflowX: "hidden" }}>
       {/* <div className="particle">
           <Particles/>
         </div> */}
+        <div className={active ? "activenav" : ""} >
       <Navbar />
       <HeroSection />
       <Our_Products />
@@ -28,6 +38,7 @@ const Home = () => {
       <FaqSection />
       <ContactSection />
       <Footer />
+    </div>
     </div>
   );
 };

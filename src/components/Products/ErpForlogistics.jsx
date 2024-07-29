@@ -1,133 +1,133 @@
-import React, { useState } from 'react'
-import Footer from '../Footer';
-import { Col, Container, Row } from 'react-bootstrap';
-import Navbar from '../Navbar';
+import React, { useState } from "react";
+import Footer from "../Footer";
+import { Col, Container, Row } from "react-bootstrap";
+import Navbar from "../Navbar";
 
 const ErpForlogistics = () => {
-      const [activeAccordion, setActiveAccordion] = useState(null);
+  const [activeAccordion, setActiveAccordion] = useState(null);
+  const [activeTab, setActiveTab] = useState(0);
+  const faqData = [
+    {
+      question: "Operation Module",
+      answer: (
+        <div className="content">
+          <Row className="no-padd-left no-padd-right">
+            <Col lg={4}>
+              <ul className="cog">
+                <li>Booking Details</li>
+                <li>Outgoing Manifest</li>
+                <li>Incoming Manifest</li>
+              </ul>
+            </Col>
+            <Col lg={4}>
+              <ul className="cog">
+                <li>Run-sheet Preparation</li>
+                <li>Run-sheet updating</li>
+                <li>POD update and Doc upload</li>
+              </ul>
+            </Col>
+            <Col lg={4}>
+              <ul className="cog">
+                <li>Transshipment Details</li>
+                <li>Petty Cash Handling Details</li>
+              </ul>
+            </Col>
+          </Row>
+        </div>
+      ),
+    },
+    {
+      question: "Shipment Tracking",
+      answer: (
+        <Row className="no-padd-left no-padd-right">
+          <Col lg={4}>
+            <ul className="anchor">
+              <li>Multiple Tracking</li>
+              <li>Shipment Internal Tracking</li>
+            </ul>
+          </Col>
+          <Col lg={4}>
+            <ul className="anchor">
+              <li>Shipment Online Tracking</li>
+            </ul>
+          </Col>
+          <Col lg={4}>
+            <ul className="anchor">
+              <li>Provide tracking option on Website</li>
+            </ul>
+          </Col>
+        </Row>
+      ),
+    },
+    {
+      question: "Billing and Invoice",
+      answer: (
+        <div className="content">
+          <Row className="no-padd-left no-padd-right">
+            <Col lg={4}>
+              <ul className="file">
+                <li>Customer wise invoice</li>
+                <li>Doc Wise Invoice</li>
+              </ul>
+            </Col>
+            <Col lg={4}>
+              <ul className="file">
+                <li>Bill Submission</li>
+                <li>Invoice Tracking</li>
+              </ul>
+            </Col>
+            <Col lg={4}>
+              <ul className="file">
+                <li>Customer Outstanding Report</li>
+                <li>Finance and Accounts Management</li>
+              </ul>
+            </Col>
+          </Row>
+        </div>
+      ),
+    },
+    {
+      question: "Reports",
+      answer: (
+        <div className="content">
+          <Row className="no-padd-left no-padd-right">
+            <Col lg={4}>
+              <ul className="chart">
+                <li>Incoming Manifest</li>
+                <li>Outgoing Manifest</li>
+                <li>Run-sheet</li>
+                <li>GCN Stock Update</li>
+              </ul>
+            </Col>
+            <Col lg={4}>
+              <ul className="chart">
+                <li>Rate Master</li>
+                <li>Overall Count Report</li>
+                <li>Sales Report</li>
+                <li>Receiving and Booking Report</li>
+              </ul>
+            </Col>
+            <Col lg={4}>
+              <ul className="chart">
+                <li>Target Report</li>
+                <li>Load Handling Report</li>
+                <li>Payment Report, Etc..</li>
+              </ul>
+            </Col>
+          </Row>
+        </div>
+      ),
+    },
+  ];
 
-      const faqData = [
-        {
-          question: "Operation Module",
-          answer: (
-            <div className="content">
-              <Row className="no-padd-left no-padd-right">
-                <Col lg={4}>
-                  <ul className="cog">
-                    <li>Booking Details</li>
-                    <li>Outgoing Manifest</li>
-                    <li>Incoming Manifest</li>
-                  </ul>
-                </Col>
-                <Col lg={4}>
-                  <ul className="cog">
-                    <li>Run-sheet Preparation</li>
-                    <li>Run-sheet updating</li>
-                    <li>POD update and Doc upload</li>
-                  </ul>
-                </Col>
-                <Col lg={4}>
-                  <ul className="cog">
-                    <li>Transshipment Details</li>
-                    <li>Petty Cash Handling Details</li>
-                  </ul>
-                </Col>
-              </Row>
-            </div>
-          ),
-        },
-        {
-          question: "Shipment Tracking",
-          answer: (
-            <Row className="no-padd-left no-padd-right">
-              <Col lg={4}>
-                <ul className="anchor">
-                  <li>Multiple Tracking</li>
-                  <li>Shipment Internal Tracking</li>
-                </ul>
-              </Col>
-              <Col lg={4}>
-                <ul className="anchor">
-                  <li>Shipment Online Tracking</li>
-                </ul>
-              </Col>
-              <Col lg={4}>
-                <ul className="anchor">
-                  <li>Provide tracking option on Website</li>
-                </ul>
-              </Col>
-            </Row>
-          ),
-        },
-        {
-          question: "Billing and Invoice",
-          answer: (
-            <div className="content">
-              <Row className="no-padd-left no-padd-right">
-                <Col lg={4}>
-                  <ul className="file">
-                    <li>Customer wise invoice</li>
-                    <li>Doc Wise Invoice</li>
-                  </ul>
-                </Col>
-                <Col lg={4}>
-                  <ul className="file">
-                    <li>Bill Submission</li>
-                    <li>Invoice Tracking</li>
-                  </ul>
-                </Col>
-                <Col lg={4}>
-                  <ul className="file">
-                    <li>Customer Outstanding Report</li>
-                    <li>Finance and Accounts Management</li>
-                  </ul>
-                </Col>
-              </Row>
-            </div>
-          ),
-        },
-        {
-          question: "Reports",
-          answer: (
-            <div className="content">
-              <Row className="no-padd-left no-padd-right">
-                <Col lg={4}>
-                  <ul className="chart">
-                    <li>Incoming Manifest</li>
-                    <li>Outgoing Manifest</li>
-                    <li>Run-sheet</li>
-                    <li>GCN Stock Update</li>
-                  </ul>
-                </Col>
-                <Col lg={4}>
-                  <ul className="chart">
-                    <li>Rate Master</li>
-                    <li>Overall Count Report</li>
-                    <li>Sales Report</li>
-                    <li>Receiving and Booking Report</li>
-                  </ul>
-                </Col>
-                <Col lg={4}>
-                  <ul className="chart">
-                    <li>Target Report</li>
-                    <li>Load Handling Report</li>
-                    <li>Payment Report, Etc..</li>
-                  </ul>
-                </Col>
-              </Row>
-            </div>
-          ),
-        },
-      ];
-
-      const toggleAccordion = (index) => {
-        setActiveAccordion(activeAccordion === index ? null : index);
-      };
+  const toggleAccordion = (index) => {
+    setActiveAccordion(activeAccordion === index ? null : index);
+  };
   return (
     <main className="page_content">
       <Navbar />
       {/* Page Banner Section */}
-      <section
+      {/* <section
         className="page_banner_section text-center"
         style={{ backgroundColor: "#E3F0FF" }}
       >
@@ -141,7 +141,7 @@ const ErpForlogistics = () => {
           </div>
           <h1 className="page_title mb-0 ">ERP for Logistics</h1>
         </Container>
-      </section>
+      </section> */}
 
       {/* Service Details Section */}
       <section className="service_details_section section_space bg-light">
@@ -790,60 +790,43 @@ const ErpForlogistics = () => {
                     </div>
 
                     <div className="row align-items-center justify-content-lg-between">
-                      <div className="col-lg-6">
-                        <div
-                          className="faq_accordion accordion"
-                          id="service_process_faq"
-                        >
-                          {faqData.map((item, index) => (
-                            <div className="accordion-item" key={index}>
-                              <div
-                                className={`accordion-button ${
-                                  activeAccordion === index ? "active" : ""
-                                }`}
-                                role="button"
-                                onClick={() => toggleAccordion(index)}
-                                aria-expanded={
-                                  activeAccordion === index ? "true" : "false"
-                                }
-                                aria-controls={`collapse_${index}`}
-                              >
-                                {item.question}
-                              </div>
-                              <div
-                                id={`collapse_${index}`}
-                                className={`accordion-collapse collapse ${
-                                  activeAccordion === index ? "show" : ""
-                                }`}
-                                data-bs-parent="#service_process_faq"
-                              >
-                                <div>
-                                  <p className="m-0">{item.answer}</p>
-                                </div>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                      <div className="col-lg-5">
-                        <ul className="content_layer_group unordered_list_block text-center">
-                          {faqData.map((item, index) => (
-                            <li
-                              key={index}
-                              role="button"
-                              data-bs-toggle="collapse"
-                              data-bs-target={`#collapse_${index}`}
-                              aria-expanded={
-                                activeAccordion === index ? "true" : "false"
-                              }
-                              aria-controls={`collapse_${index}`}
-                            >
-                              <span>{item.question}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
+      <div className="col-lg-7">
+        <div className="faq_tabs">
+          <ul className="nav nav-tabs" id="faqTabs" role="tablist">
+            {faqData.map((item, index) => (
+              <li className="nav-item" key={index}>
+                <a
+                  className={`nav-link ${activeTab === index ? "active" : ""}`}
+                  id={`tab_${index}`}
+                  data-bs-toggle="tab"
+                  href={`#tab_content_${index}`}
+                  role="tab"
+                  aria-controls={`tab_content_${index}`}
+                  aria-selected={activeTab === index ? "true" : "false"}
+                  onClick={() => setActiveTab(index)}
+                  style={{ whiteSpace: 'nowrap' }}  // Add this style to keep the text on one line
+                >
+                  {item.question}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className="tab-content" id="faqTabContent">
+            {faqData.map((item, index) => (
+              <div
+                className={`tab-pane fade ${activeTab === index ? "show active" : ""}`}
+                id={`tab_content_${index}`}
+                role="tabpanel"
+                aria-labelledby={`tab_${index}`}
+                key={index}
+              >
+                <p className="m-0">{item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
                   </div>
                 </div>
                 <div
@@ -1160,60 +1143,43 @@ const ErpForlogistics = () => {
                     </div>
 
                     <div className="row align-items-center justify-content-lg-between">
-                      <div className="col-lg-6">
-                        <div
-                          className="faq_accordion accordion"
-                          id="service_process_faq"
-                        >
-                          {faqData.map((item, index) => (
-                            <div className="accordion-item" key={index}>
-                              <div
-                                className={`accordion-button ${
-                                  activeAccordion === index ? "active" : ""
-                                }`}
-                                role="button"
-                                onClick={() => toggleAccordion(index)}
-                                aria-expanded={
-                                  activeAccordion === index ? "true" : "false"
-                                }
-                                aria-controls={`collapse_${index}`}
-                              >
-                                {item.question}
-                              </div>
-                              <div
-                                id={`collapse_${index}`}
-                                className={`accordion-collapse collapse ${
-                                  activeAccordion === index ? "show" : ""
-                                }`}
-                                data-bs-parent="#service_process_faq"
-                              >
-                                <div>
-                                  <p className="m-0">{item.answer}</p>
-                                </div>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                      <div className="col-lg-5">
-                        <ul className="content_layer_group unordered_list_block text-center">
-                          {faqData.map((item, index) => (
-                            <li
-                              key={index}
-                              role="button"
-                              data-bs-toggle="collapse"
-                              data-bs-target={`#collapse_${index}`}
-                              aria-expanded={
-                                activeAccordion === index ? "true" : "false"
-                              }
-                              aria-controls={`collapse_${index}`}
-                            >
-                              <span>{item.question}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
+      <div className="col-lg-7">
+        <div className="faq_tabs">
+          <ul className="nav nav-tabs" id="faqTabs" role="tablist">
+            {faqData.map((item, index) => (
+              <li className="nav-item" key={index}>
+                <a
+                  className={`nav-link ${activeTab === index ? "active" : ""}`}
+                  id={`tab_${index}`}
+                  data-bs-toggle="tab"
+                  href={`#tab_content_${index}`}
+                  role="tab"
+                  aria-controls={`tab_content_${index}`}
+                  aria-selected={activeTab === index ? "true" : "false"}
+                  onClick={() => setActiveTab(index)}
+                  style={{ whiteSpace: 'nowrap' }}  // Add this style to keep the text on one line
+                >
+                  {item.question}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className="tab-content" id="faqTabContent">
+            {faqData.map((item, index) => (
+              <div
+                className={`tab-pane fade ${activeTab === index ? "show active" : ""}`}
+                id={`tab_content_${index}`}
+                role="tabpanel"
+                aria-labelledby={`tab_${index}`}
+                key={index}
+              >
+                <p className="m-0">{item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
                   </div>
                 </div>
                 <div
@@ -1436,60 +1402,43 @@ const ErpForlogistics = () => {
                     </div>
 
                     <div className="row align-items-center justify-content-lg-between">
-                      <div className="col-lg-6">
-                        <div
-                          className="faq_accordion accordion"
-                          id="service_process_faq"
-                        >
-                          {faqData.map((item, index) => (
-                            <div className="accordion-item" key={index}>
-                              <div
-                                className={`accordion-button ${
-                                  activeAccordion === index ? "active" : ""
-                                }`}
-                                role="button"
-                                onClick={() => toggleAccordion(index)}
-                                aria-expanded={
-                                  activeAccordion === index ? "true" : "false"
-                                }
-                                aria-controls={`collapse_${index}`}
-                              >
-                                {item.question}
-                              </div>
-                              <div
-                                id={`collapse_${index}`}
-                                className={`accordion-collapse collapse ${
-                                  activeAccordion === index ? "show" : ""
-                                }`}
-                                data-bs-parent="#service_process_faq"
-                              >
-                                <div>
-                                  <p className="m-0">{item.answer}</p>
-                                </div>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                      <div className="col-lg-5">
-                        <ul className="content_layer_group unordered_list_block text-center">
-                          {faqData.map((item, index) => (
-                            <li
-                              key={index}
-                              role="button"
-                              data-bs-toggle="collapse"
-                              data-bs-target={`#collapse_${index}`}
-                              aria-expanded={
-                                activeAccordion === index ? "true" : "false"
-                              }
-                              aria-controls={`collapse_${index}`}
-                            >
-                              <span>{item.question}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
+      <div className="col-lg-7">
+        <div className="faq_tabs">
+          <ul className="nav nav-tabs" id="faqTabs" role="tablist">
+            {faqData.map((item, index) => (
+              <li className="nav-item" key={index}>
+                <a
+                  className={`nav-link ${activeTab === index ? "active" : ""}`}
+                  id={`tab_${index}`}
+                  data-bs-toggle="tab"
+                  href={`#tab_content_${index}`}
+                  role="tab"
+                  aria-controls={`tab_content_${index}`}
+                  aria-selected={activeTab === index ? "true" : "false"}
+                  onClick={() => setActiveTab(index)}
+                  style={{ whiteSpace: 'nowrap' }}  // Add this style to keep the text on one line
+                >
+                  {item.question}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className="tab-content" id="faqTabContent">
+            {faqData.map((item, index) => (
+              <div
+                className={`tab-pane fade ${activeTab === index ? "show active" : ""}`}
+                id={`tab_content_${index}`}
+                role="tabpanel"
+                aria-labelledby={`tab_${index}`}
+                key={index}
+              >
+                <p className="m-0">{item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
                   </div>
                 </div>
                 <div
@@ -1712,60 +1661,43 @@ const ErpForlogistics = () => {
                     </div>
 
                     <div className="row align-items-center justify-content-lg-between">
-                      <div className="col-lg-6">
-                        <div
-                          className="faq_accordion accordion"
-                          id="service_process_faq"
-                        >
-                          {faqData.map((item, index) => (
-                            <div className="accordion-item" key={index}>
-                              <div
-                                className={`accordion-button ${
-                                  activeAccordion === index ? "active" : ""
-                                }`}
-                                role="button"
-                                onClick={() => toggleAccordion(index)}
-                                aria-expanded={
-                                  activeAccordion === index ? "true" : "false"
-                                }
-                                aria-controls={`collapse_${index}`}
-                              >
-                                {item.question}
-                              </div>
-                              <div
-                                id={`collapse_${index}`}
-                                className={`accordion-collapse collapse ${
-                                  activeAccordion === index ? "show" : ""
-                                }`}
-                                data-bs-parent="#service_process_faq"
-                              >
-                                <div>
-                                  <p className="m-0">{item.answer}</p>
-                                </div>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                      <div className="col-lg-5">
-                        <ul className="content_layer_group unordered_list_block text-center">
-                          {faqData.map((item, index) => (
-                            <li
-                              key={index}
-                              role="button"
-                              data-bs-toggle="collapse"
-                              data-bs-target={`#collapse_${index}`}
-                              aria-expanded={
-                                activeAccordion === index ? "true" : "false"
-                              }
-                              aria-controls={`collapse_${index}`}
-                            >
-                              <span>{item.question}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
+      <div className="col-lg-7">
+        <div className="faq_tabs">
+          <ul className="nav nav-tabs" id="faqTabs" role="tablist">
+            {faqData.map((item, index) => (
+              <li className="nav-item" key={index}>
+                <a
+                  className={`nav-link ${activeTab === index ? "active" : ""}`}
+                  id={`tab_${index}`}
+                  data-bs-toggle="tab"
+                  href={`#tab_content_${index}`}
+                  role="tab"
+                  aria-controls={`tab_content_${index}`}
+                  aria-selected={activeTab === index ? "true" : "false"}
+                  onClick={() => setActiveTab(index)}
+                  style={{ whiteSpace: 'nowrap' }}  // Add this style to keep the text on one line
+                >
+                  {item.question}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className="tab-content" id="faqTabContent">
+            {faqData.map((item, index) => (
+              <div
+                className={`tab-pane fade ${activeTab === index ? "show active" : ""}`}
+                id={`tab_content_${index}`}
+                role="tabpanel"
+                aria-labelledby={`tab_${index}`}
+                key={index}
+              >
+                <p className="m-0">{item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
                   </div>
                 </div>
               </div>
@@ -1975,4 +1907,4 @@ const ServiceItem = ({ icon, title }) => (
     </a>
   </li>
 );
-export default ErpForlogistics
+export default ErpForlogistics;

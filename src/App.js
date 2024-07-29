@@ -27,7 +27,7 @@ import Sustainability from "./Sustainability";
 import OurPartners from "./components/OurPartners";
 import NotFoundPage from "./components/NotFoundPage";
 import ErpForlogistics from "./components/Products/ErpForlogistics";
-
+import Automobiles from "./components/Solutions/Automobiles";
 function App() {
   return (
     <div style={{ overflowX: "hidden" }}>
@@ -49,6 +49,7 @@ function App() {
         <Route path="/OurPartners" element={<OurPartners />} />
         <Route path="*" element={<NotFoundPage />} />
         <Route path="/ERP-Logistics" element={<ErpForlogistics />} />
+        <Route path="/automobiles" element={<Automobiles />} />
       </Routes>
     </div>
   );
