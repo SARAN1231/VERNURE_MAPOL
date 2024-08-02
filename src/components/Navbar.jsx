@@ -72,7 +72,7 @@ function Navbar() {
       <header
         className="site_header site_header_2"
         style={{
-          backgroundColor: "#E3F0FF",
+          backgroundColor: "white",
           color: "black",
           height: "100px",
           position: "sticky",

@@ -123,34 +123,43 @@ const ErpForlogistics = () => {
   const toggleAccordion = (index) => {
     setActiveAccordion(activeAccordion === index ? null : index);
   };
+
+  const backgroundImage = "url(https://blog.fleetx.io/content/images/2022/11/ERP-for-Logistics.jpg)"
   return (
     <main className="page_content">
       <Navbar />
+     
       {/* Page Banner Section */}
-      {/* <section
-        className="page_banner_section text-center"
-        style={{ backgroundColor: "#E3F0FF" }}
-      >
-        <Container>
-          <div
-            className="heading_focus_text "
-            style={{ color: "black" }}
-          >
-            Product
-            <span className="badge bg-secondary">Details 😍</span>
-          </div>
-          <h1 className="page_title mb-0 ">ERP for Logistics</h1>
-        </Container>
-      </section> */}
+      <section
+      className="page_banner_section text-center"
+      style={{ background: backgroundImage,
+        background: backgroundImage,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    height: "40vh",
+    margin: "30px auto",
+    width: "80%"
+      
+      }}
+    >
+      <Container>
+        {/* <div className="heading_focus_text" style={{ color: "black" }}>
+          Product
+          <span className="badge bg-secondary">Details 😍</span>
+        </div>
+        <h1 className="page_title mb-0">ERP for Logistics</h1> */}
+      </Container>
+    </section>
 
       {/* Service Details Section */}
       <section className="service_details_section section_space bg-light">
         <Container>
-          <div className="details_item_image position-relative">
+          {/* <div className="details_item_image position-relative">
             <img
               src="./images/resource/ERP-for-Logistics.jpg"
               alt="Service Details Image"
-            />
+            /> */}
             {/* <a
               className="video_btn ripple_effect"
               href="https://www.youtube.com/watch?v=7e90gBu4pas"
@@ -159,8 +168,8 @@ const ErpForlogistics = () => {
                 <i className="fa-solid fa-play"></i>
               </span>
             </a> */}
-          </div>
-          <h2 className="details_item_title">Logistics ERP Software</h2>
+          {/* </div> */}
+          <h2 className="details_item_title text-center">Logistics ERP Software</h2>
           <p>
             Logistics process is the part and vital role of supply chain
             management that plans, implements and controls the effective forward
