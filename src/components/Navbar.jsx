@@ -130,14 +130,14 @@ function Navbar() {
                                 <div className="row">
                                   <div className="col-lg-4">
                                     <div className="megamenu_widget">
-                                      <h3 className="megamenu_info_title">
+                                      {/* <h3 className="megamenu_info_title">
                                         For Industries
-                                      </h3>
+                                      </h3> */}
                                       <ul className="icon_list unordered_list_block">
                                         <li>
                                           <span className="icon_list_text">
                                             <Link to={"/Automobiles"}>
-                                              Automobiles
+                                            Barcode Solutions
                                             </Link>
                                           </span>
                                         </li>
@@ -149,7 +149,7 @@ function Navbar() {
                                         <li>
                                           <span className="icon_list_text">
                                             <Link to={"/Services"}>
-                                              Manufacturing
+                                            RFID Solutions
                                             </Link>
                                           </span>
                                         </li>
@@ -161,7 +161,7 @@ function Navbar() {
                                         <li>
                                           <span className="icon_list_text">
                                             <Link to={"/Services"}>
-                                              Logistics & Supply chain
+                                            Mobility Solutions
                                             </Link>
                                           </span>
                                         </li>
@@ -173,7 +173,7 @@ function Navbar() {
                                         <li>
                                           <span className="icon_list_text">
                                             <Link to={"/Services"}>
-                                              Other Industries
+                                            AIDC Solutions
                                             </Link>
                                           </span>
                                         </li>
@@ -182,14 +182,14 @@ function Navbar() {
                                   </div>
                                   <div className="col-lg-4">
                                     <div className="megamenu_widget">
-                                      <h3 className="megamenu_info_title">
+                                      {/* <h3 className="megamenu_info_title">
                                         For Initiatives
-                                      </h3>
+                                      </h3> */}
                                       <ul className="icon_list unordered_list_block">
                                         <li>
                                           <span className="icon_list_text">
                                             <Link to={"/Services"}>
-                                              Safety & Sustainablity
+                                            POS Solutions
                                             </Link>
                                           </span>
                                         </li>
@@ -201,7 +201,7 @@ function Navbar() {
                                         <li>
                                           <span className="icon_list_text">
                                             <Link to={"/Services"}>
-                                              Industry 4.0
+                                            Surveillance Solutions
                                             </Link>
                                           </span>
                                         </li>
@@ -213,7 +213,7 @@ function Navbar() {
                                         <li>
                                           <span className="icon_list_text">
                                             <Link to={"/Services"}>
-                                              e -Invoice
+                                            Biometric Solutions
                                             </Link>
                                           </span>
                                         </li>
@@ -232,14 +232,14 @@ function Navbar() {
                                   </div>
                                   <div className="col-lg-4">
                                     <div className="megamenu_widget">
-                                      <h3 className="megamenu_info_title">
+                                      {/* <h3 className="megamenu_info_title">
                                         For Businesses
-                                      </h3>
+                                      </h3> */}
                                       <ul className="icon_list unordered_list_block">
                                         <li>
                                           <span className="icon_list_text">
                                             <Link to={"/Services"}>
-                                              Cloud Services
+                                            Embedded Solutions
                                             </Link>
                                           </span>
                                         </li>
@@ -251,7 +251,7 @@ function Navbar() {
                                         <li>
                                           <span className="icon_list_text">
                                             <Link to={"/Services"}>
-                                              IT Consulting Services
+                                            Internet Of Things
                                             </Link>
                                           </span>
                                         </li>
@@ -263,7 +263,7 @@ function Navbar() {
                                         <li>
                                           <span className="icon_list_text">
                                             <Link to={"/Services"}>
-                                              Business Suites
+                                            E-Invoice
                                             </Link>
                                           </span>
                                         </li>
@@ -376,12 +376,12 @@ function Navbar() {
                                           </small>
 
                                           <small className="iconbox_title">
-                                            ERP for Manufacturing
+                                          ERP Software Solutions
                                           </small>
                                         </span>
-                                        <span className="description mb-0">
+                                        {/* <span className="description mb-0">
                                           Learn more about Techco
-                                        </span>
+                                        </span> */}
                                       </Link>
                                     </div>
                                     <div className="col-lg-3 col-md-6">
@@ -397,12 +397,12 @@ function Navbar() {
                                             />
                                           </small>
                                           <small className="iconbox_title">
-                                            ERP for Logistics
+                                          Logistics ERP Software
                                           </small>
                                         </span>
-                                        <span className="description mb-0">
+                                        {/* <span className="description mb-0">
                                           Streamlined Pricing
-                                        </span>
+                                        </span> */}
                                       </Link>
                                     </div>
                                     <div className="col-lg-3 col-md-6">
@@ -418,12 +418,12 @@ function Navbar() {
                                             />
                                           </small>
                                           <small className="iconbox_title">
-                                            ESG Automation
+                                          Material Resource Planning (MRP)
                                           </small>
                                         </span>
-                                        <span className="description mb-0">
+                                        {/* <span className="description mb-0">
                                           Explore our all overview
-                                        </span>
+                                        </span> */}
                                       </Link>
                                     </div>
                                     <div className="col-lg-3 col-md-6">
@@ -439,12 +439,12 @@ function Navbar() {
                                             />
                                           </small>
                                           <small className="iconbox_title">
-                                            Asset Tracking
+                                          Human Resource Management System
                                           </small>
                                         </span>
-                                        <span className="description mb-0">
+                                        {/* <span className="description mb-0">
                                           Explore our work overview
-                                        </span>
+                                        </span> */}
                                       </Link>
                                     </div>
                                     <div className="col-lg-3 col-md-6">
@@ -460,12 +460,12 @@ function Navbar() {
                                             />
                                           </small>
                                           <small className="iconbox_title">
-                                            Paper Production Tracking
+                                          Warehouse Management System
                                           </small>
                                         </span>
-                                        <span className="description mb-0">
+                                        {/* <span className="description mb-0">
                                           We are friendly Join our team
-                                        </span>
+                                        </span> */}
                                       </Link>
                                     </div>
                                     <div className="col-lg-3 col-md-6">
@@ -481,12 +481,12 @@ function Navbar() {
                                             />
                                           </small>
                                           <small className="iconbox_title">
-                                            FMEA Insight
+                                          Vendor Management System
                                           </small>
                                         </span>
-                                        <span className="description mb-0">
+                                        {/* <span className="description mb-0">
                                           We are friendly Join our team
-                                        </span>
+                                        </span> */}
                                       </Link>
                                     </div>
                                     <div className="col-lg-3 col-md-6">
@@ -502,12 +502,12 @@ function Navbar() {
                                             />
                                           </small>
                                           <small className="iconbox_title">
-                                            Last Mile Delivery
+                                          Sales management system
                                           </small>
                                         </span>
-                                        <small className="description mb-0">
+                                        {/* <small className="description mb-0">
                                           Happy to help you!
-                                        </small>
+                                        </small> */}
                                       </Link>
                                     </div>
                                     <div className="col-lg-3 col-md-6">
@@ -523,17 +523,101 @@ function Navbar() {
                                             />
                                           </small>
                                           <small className="iconbox_title">
-                                            Vendor Suite
+                                          Visitor Management system
                                           </small>
                                         </span>
-                                        <small className="description mb-0">
+                                        {/* <small className="description mb-0">
                                           Happy to help you!
-                                        </small>
+                                        </small> */}
+                                      </Link>
+                                    </div>
+                                    <div className="col-lg-3 col-md-6">
+                                      <Link
+                                        className="iconbox_block_2"
+                                        to={"/Services"}
+                                      >
+                                        <span className="icon_title_wrap">
+                                          <small className="iconbox_icon">
+                                            <img
+                                              src="./images/icons/icon_pen.svg"
+                                              alt="Pen SVG Icon"
+                                            />
+                                          </small>
+                                          <small className="iconbox_title">
+                                          Asset Management System (AMS)
+                                          </small>
+                                        </span>
+                                        {/* <small className="description mb-0">
+                                          Happy to help you!
+                                        </small> */}
+                                      </Link>
+                                    </div>
+                                    <div className="col-lg-3 col-md-6">
+                                      <Link
+                                        className="iconbox_block_2"
+                                        to={"/Services"}
+                                      >
+                                        <span className="icon_title_wrap">
+                                          <small className="iconbox_icon">
+                                            <img
+                                              src="./images/icons/icon_pen.svg"
+                                              alt="Pen SVG Icon"
+                                            />
+                                          </small>
+                                          <small className="iconbox_title">
+                                          LOT Management system
+                                          </small>
+                                        </span>
+                                        {/* <small className="description mb-0">
+                                          Happy to help you!
+                                        </small> */}
+                                      </Link>
+                                    </div>
+                                    <div className="col-lg-3 col-md-6">
+                                      <Link
+                                        className="iconbox_block_2"
+                                        to={"/Services"}
+                                      >
+                                        <span className="icon_title_wrap">
+                                          <small className="iconbox_icon">
+                                            <img
+                                              src="./images/icons/icon_pen.svg"
+                                              alt="Pen SVG Icon"
+                                            />
+                                          </small>
+                                          <small className="iconbox_title">
+                                          Paper Tracking Software
+                                          </small>
+                                        </span>
+                                        {/* <small className="description mb-0">
+                                          Happy to help you!
+                                        </small> */}
+                                      </Link>
+                                    </div>
+                                    <div className="col-lg-3 col-md-6">
+                                      <Link
+                                        className="iconbox_block_2"
+                                        to={"/Services"}
+                                      >
+                                        <span className="icon_title_wrap">
+                                          <small className="iconbox_icon">
+                                            <img
+                                              src="./images/icons/icon_pen.svg"
+                                              alt="Pen SVG Icon"
+                                            />
+                                          </small>
+                                          <small className="iconbox_title">
+                                          Failure Mode and Effects Analysis (FMEA)
+                                          </small>
+                                        </span>
+                                        {/* <small className="description mb-0">
+                                          Happy to help you!
+                                        </small> */}
                                       </Link>
                                     </div>
                                   </div>
                                 </div>
-                                <ul className="btns_group p-0 unordered_list justify-content-start">
+                                {/* <ul className="btns_group p-0 unordered_list justify-content-start">
                                   <li>
                                     <Link
                                       className="btn btn-primary"
@@ -614,7 +698,7 @@ function Navbar() {
                                       </div>
                                     </div>
                                   </li>
-                                </ul>
+                                </ul> */}
                               </div>
                               <div className="col-lg-3">
                                 <div className="site_author bg-primary">
@@ -664,23 +748,29 @@ function Navbar() {
                           aria-expanded="false"
                           style={{ color: "black" }}
                         >
-                          Resources
+                         Services
                         </a>
                         <ul
                           className="dropdown-menu"
                           aria-labelledby="portfolio_submenu"
                         >
                           <li>
-                            <Link to={"/Industry4"}>Industry 4.0</Link>
+                            <Link to={"/Industry4"}>IT Infrastructure And Support Services</Link>
                           </li>
                           <li>
-                            <Link to={"/Sustainability"}>Sustainability</Link>
+                            <Link to={"/Sustainability"}>Web Design Services</Link>
                           </li>
                           <li>
-                            <Link to={"/Casestudies"}>Case Studies</Link>
+                            <Link to={"/Casestudies"}>Software Development Services</Link>
                           </li>
                           <li>
-                            <Link to={"/Blogs"}>Blogs </Link>
+                            <Link to={"/Blogs"}>Mobile Application Development </Link>
+                          </li>
+                          <li>
+                            <Link to={"/Blogs"}>Digital Marketing Services </Link>
+                          </li>
+                          <li>
+                            <Link to={"/Blogs"}>Business Technology Consulting </Link>
                           </li>
                         </ul>
                       </li>
