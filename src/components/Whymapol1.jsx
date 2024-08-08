@@ -14,15 +14,9 @@ import Whymapol2 from "./Whymapol2";
 const PageBannerSection = ({ background, title, subtitle }) => (
   <section
     className="page_banner_section text-center"
-    style={{ backgroundImage: `url(${background})` }}
+    style={{backgroundColor:'#E3F0FF'}}
   >
-    <div className="container">
-      <div className="heading_focus_text text-white">
-        {title}
-        <span className="badge bg-secondary">More Techco 😃</span>
-      </div>
-      <h1 className="page_title mb-0 text-white">{subtitle}</h1>
-    </div>
+    
   </section>
 );
 
@@ -64,7 +58,7 @@ const IntroAboutSection = () => (
           <div className="col-lg-4">
             <div className="heading_focus_text">
               About
-              <span className="badge bg-secondary text-white">Techco 🙂</span>
+              <span className="badge bg-secondary text-white">Mapol 🙂</span>
             </div>
             <h2 className="heading_text mb-0">
               We Provide You Flexible Services
@@ -72,11 +66,7 @@ const IntroAboutSection = () => (
           </div>
           <div className="col-lg-6">
             <p className="heading_description mb-0">
-              At Techco, we pride ourselves on offering dynamic and IT to suit
-              your specific requirements. Our flexible approach means we can
-              adjust our offerings to accommodate your evolving needs, whether
-              you require comprehensive IT infrastructure support, strategic
-              consultancy, software development.
+            Mapol Business Solutions is a Chennai-based software development firm dedicated to empowering small and medium businesses (SMBs) with innovative and reliable solutions. Our team of experienced technocrats collaborates closely with clients to understand their unique needs and craft future-proof software that streamlines operations and fuels growth. We take pride in delivering exceptional service built on three core values: innovation, dedication, and commitment.  Our expertise spans across various industries, including e-commerce, manufacturing, finance, HR, healthcare, and education.  We leverage cutting-edge technologies to create customized solutions and deliver insightful Management Information System (MIS) reports that empower data-driven decision making and growth analysis.
             </p>
           </div>
         </div>

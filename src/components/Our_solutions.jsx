@@ -19,7 +19,7 @@ const Our_solutions = () => {
       comment:
         "Working with Techco was a game-changer for our business. Their tailored solutions and dedicated support propelled us to new heights",
       image: "images/avatar/avatar_11.webp",
-      name: "David Clark",
+      name: "Barcode Solutions",
       designation: "Board Member, UNIQA",
     },
     {
@@ -28,7 +28,7 @@ const Our_solutions = () => {
       comment:
         "I can't thank Techco enough for their expertise. Their strategic guidance revolutionized our operations and led to significant growth.",
       image: "images/avatar/avatar_10.webp",
-      name: "Sarah Johnson",
+      name: "RFID Solution",
       designation: "Board Member, UNIQA",
     },
     {
@@ -37,7 +37,7 @@ const Our_solutions = () => {
       comment:
         "Choosing Techco was one of the best decisions we made. Their team's knowledge and passion for our success were evident every step of the way.",
       image: "images/avatar/avatar_9.webp",
-      name: "Michael Smith",
+      name: "Mobility Solutions",
       designation: "Board Member, UNIQA",
     },
     {
@@ -46,7 +46,52 @@ const Our_solutions = () => {
       comment:
         "Partnering with Techco was a game-changer. Their innovative strategies and personalized approach exceeded our expectations",
       image: "images/avatar/avatar_8.webp",
-      name: "Emily Brown",
+      name: "POS Solutions",
+      designation: "Board Member, UNIQA",
+    },
+    {
+      rating: 5,
+      icon: "icon_code.svg",
+      comment:
+        "I can't thank Techco enough for their expertise. Their strategic guidance revolutionized our operations and led to significant growth.",
+      image: "images/avatar/avatar_10.webp",
+      name: "Surveillance Solutions",
+      designation: "Board Member, UNIQA",
+    },
+    {
+      rating: 5,
+      icon: "icon_code.svg",
+      comment:
+        "Choosing Techco was one of the best decisions we made. Their team's knowledge and passion for our success were evident every step of the way.",
+      image: "images/avatar/avatar_9.webp",
+      name: "Biometric Solutions",
+      designation: "Board Member, UNIQA",
+    },
+    {
+      rating: 5,
+      icon: "icon_code.svg",
+      comment:
+        "Partnering with Techco was a game-changer. Their innovative strategies and personalized approach exceeded our expectations",
+      image: "images/avatar/avatar_8.webp",
+      name: "Embedded Solutions",
+      designation: "Board Member, UNIQA",
+    },
+    {
+      rating: 5,
+      icon: "icon_code.svg",
+      comment:
+        "Choosing Techco was one of the best decisions we made. Their team's knowledge and passion for our success were evident every step of the way.",
+      image: "images/avatar/avatar_9.webp",
+      name: "Internet Of Things",
+      designation: "Board Member, UNIQA",
+    },
+    {
+      rating: 5,
+      icon: "icon_code.svg",
+      comment:
+        "Partnering with Techco was a game-changer. Their innovative strategies and personalized approach exceeded our expectations",
+      image: "images/avatar/avatar_8.webp",
+      name: "E-Invoice",
       designation: "Board Member, UNIQA",
     },
   ];

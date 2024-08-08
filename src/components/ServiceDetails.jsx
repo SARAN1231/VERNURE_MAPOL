@@ -428,3 +428,5 @@ const ServiceItem = ({ icon, title }) => (
 );
 
 export default ServiceDetailsPage;
+
+
