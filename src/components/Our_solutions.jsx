@@ -123,7 +123,13 @@ const Our_solutions = () => {
               slidesPerView: 3,
               spaceBetween: 20,
             },
-            600: {
+            500: {
+              // For devices wider than 500px
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            0: {
+              // For devices smaller than 500px
               slidesPerView: 1,
               spaceBetween: 10,
             },
@@ -143,11 +149,16 @@ const Our_solutions = () => {
                 <br />
                 <div className="review_admin_info">
                   <h4 className="review_admin_name">{review.name}</h4>
-                  <span className="review_admin_designation">{review.designation}</span>
+                  <span className="review_admin_designation">
+                    {review.designation}
+                  </span>
                   <br />
                   <br />
                   <Link className="btn btn-primary" to="/contact">
-                    <span style={{ marginTop: "15px", marginBottom: "15px" }} data-text="Get Started">
+                    <span
+                      style={{ marginTop: "15px", marginBottom: "15px" }}
+                      data-text="Get Started"
+                    >
                       Read More
                     </span>
                     <span className="btn_icon">

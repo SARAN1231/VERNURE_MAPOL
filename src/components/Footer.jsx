@@ -81,19 +81,20 @@ function Footer() {
           <div className="row justify-content-lg-between">
             <div className="col-lg-2 col-md-6">
               <div className="footer_widget">
-                <h2 className="footer_info_title">For Industries</h2>
+                <h2 className="footer_info_title">Solutions</h2>
                 <ul className="icon_list unordered_list_block">
                   {[
-                    "Automobiles",
-                    "Manufacturing",
-                    "Logistics & Supply Chain",
-                    "Other Industries",
-                    "Cloud Services",
-                    "IT Consulting Services",
-                    "Business Suites",
-                    "Safety & Sustainability",
-                    "Industry 4.0",
-                    "e-Invoice",
+                    "Barcode Solutions",
+                    "RFID Solutions",
+                    "Mobility Solutions",
+                    "AIDC Solutions",
+                    "POS Solutions",
+                    "Surveillane Solutions",
+                    "Biometric Solutions",
+                   " Embedded Solutions",
+                    "Internet Of Things",
+                    "E-Invoice"
+                    
                   ].map((item, index) => (
                     <li key={index}>
                       <a href="#main_menu_dropdown">
@@ -107,18 +108,16 @@ function Footer() {
 
             <div className="col-lg-2 col-md-6">
               <div className="footer_widget">
-                <h3 className="footer_info_title">Products</h3>
+                <h3 className="footer_info_title">Services</h3>
                 <ul className="icon_list unordered_list_block">
                   {[
-                    "ERP for Manufacturing",
-                    "ERP for Logistics",
-                    "ESG Automation",
-                    "Asset Tracking",
-                    "Paper Production Tracking",
-                    "FMEA Insight",
-                    "Last Mile Delivery",
-                    "Vendor Suite",
-                    "HRMS Suite",
+                    "IT Infrastructure And Support Services",
+                    "Web Design Services",
+                    "Software Development Services",
+                    "Mobile Application Development",
+                    "Digital Marketing Services",
+                    "Business Technology Consulting",
+                    
                   ].map((item, index) => (
                     <li key={index}>
                       <a href="#main_menu_dropdown">

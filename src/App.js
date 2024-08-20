@@ -27,7 +27,8 @@ import Sustainability from "./Sustainability";
 import OurPartners from "./components/OurPartners";
 import NotFoundPage from "./components/NotFoundPage";
 import ErpForlogistics from "./components/Products/ErpForlogistics";
-import Automobiles from "./components/Solutions/Automobiles";
+import Barcode_Solutions from "./components/Solutions/Barcode_Solutions";
+import Mobile_Application from "./components/Services/Mobile_Application";
 function App() {
   return (
     <div style={{ overflowX: "hidden" }}>
@@ -35,7 +36,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Aboutus" element={<Whymapol1 />} />
         <Route path="/Team" element={<LeadershipTeam />} />
-        <Route path="/Business_approach" element={<Bussiness />} />
+        <Route path="/Mobile_Application" element={<Mobile_Application />} />
         <Route path="/Services" element={<ServiceDetailsPage />} />
         <Route path="/SuccessStories" element={<SuccessStories />} />
         <Route path="/Clientsbyindustry" element={<Clientsbyindustry />} />
@@ -49,7 +50,7 @@ function App() {
         <Route path="/OurPartners" element={<OurPartners />} />
         <Route path="*" element={<NotFoundPage />} />
         <Route path="/ERP-Logistics" element={<ErpForlogistics />} />
-        <Route path="/automobiles" element={<Automobiles />} />
+        <Route path="/automobiles" element={<Barcode_Solutions />} />
       </Routes>
     </div>
   );

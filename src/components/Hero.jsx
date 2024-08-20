@@ -17,6 +17,7 @@ const HeroSection = () => {
         style={{
           backgroundImage: "url('./images/backgrounds/bg_image_2.webp')",
           backgroundColor: "#093268",
+          height: "100vh",
         }}
       >
         <div className="video-background">
@@ -36,7 +37,7 @@ const HeroSection = () => {
                   Perfect Company Solutions
                 </div>
                 <h1 className="text-white">
-                  We Help Companies in <mark>Digitizing</mark> Their Businesses.
+                  We Help Companies in Digitizing Their Businesses.
                 </h1>
                 <p>
                   In today's rapidly evolving digital landscape, staying ahead
@@ -74,71 +75,81 @@ const HeroSection = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-lg-6">
-              <ul className="empowering_services unordered_list_block ps-lg-5">
-                <li>
-                  <div className="iconbox_block layout_icon_left">
-                    <div className="iconbox_icon">
-                      <img
-                        src="./images/icons/icon_bulb.svg"
-                        alt="Bulb SVG Icon"
-                      />
-                    </div>
-                    <div className="iconbox_content">
-                      <h3 className="iconbox_title" style={{ color: "white" }}>
-                        Tailored Solutions
-                      </h3>
-                      <p className="mb-0">
-                        Our consulting services are customized to suit the
-                        unique needs and goals of each client, ensuring precise
-                        alignment with their business objectives.
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="iconbox_block layout_icon_left">
-                    <div className="iconbox_icon">
-                      <img
-                        src="./images/icons/icon_user_rating.svg"
-                        alt="User Rating SVG Icon"
-                      />
-                    </div>
-                    <div className="iconbox_content">
-                      <h3 className="iconbox_title" style={{ color: "white" }}>
-                        Collaborative Approach
-                      </h3>
-                      <p className="mb-0">
-                        We believe in fostering strong partnerships with our
-                        clients, working closely with them to understand their
-                        challenges, identify opportunities.
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="iconbox_block layout_icon_left">
-                    <div className="iconbox_icon">
-                      <img
-                        src="./images/icons/icon_hand_shake.svg"
-                        alt="Hand Shake SVG Icon"
-                      />
-                    </div>
-                    <div className="iconbox_content">
-                      <h3 className="iconbox_title" style={{ color: "white" }}>
-                        Expert Team Members
-                      </h3>
-                      <p className="mb-0">
-                        We believe in fostering strong partnerships with our
-                        clients, working closely with them to understand their
-                        challenges, identify opportunities.
-                      </p>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
           </div>
+        </div>
+        <div className="col-lg-12" style={{paddingLeft:'120px',paddingRight:'120px',paddingTop:'60px'}}>
+          <ul
+            className="empowering_services unordered_list_block ps-lg-5"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+              gap: "50px",
+            }}
+          >
+            <li>
+              <div className="iconbox_block layout_icon_left">
+                <div className="iconbox_icon">
+                  <img src="./images/icons/icon_bulb.svg" alt="Bulb SVG Icon" />
+                </div>
+                <div className="iconbox_content">
+                  <h3
+                    className="iconbox_title"
+                    style={{ color: "white", fontSize: "23px" }}
+                  >
+                    Tailored Solutions
+                  </h3>
+                  <p className="mb-0">
+                    Tailored consulting services aligned with each client's
+                    business goals..
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div className="iconbox_block layout_icon_left">
+                <div className="iconbox_icon">
+                  <img
+                    src="./images/icons/icon_user_rating.svg"
+                    alt="User Rating SVG Icon"
+                  />
+                </div>
+                <div className="iconbox_content">
+                  <h3
+                    className="iconbox_title"
+                    style={{ color: "white", fontSize: "23px" }}
+                  >
+                    Collaborative Approach
+                  </h3>
+                  <p className="mb-0">
+                    Building strong client partnerships by understanding
+                    challenges and opportunities
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div className="iconbox_block layout_icon_left">
+                <div className="iconbox_icon">
+                  <img
+                    src="./images/icons/icon_hand_shake.svg"
+                    alt="Hand Shake SVG Icon"
+                  />
+                </div>
+                <div className="iconbox_content">
+                  <h3
+                    className="iconbox_title"
+                    style={{ color: "white", fontSize: "23px" }}
+                  >
+                    Expert Team Members
+                  </h3>
+                  <p className="mb-0">
+                    Fostering strong client partnerships by understanding
+                    challenges and opportunities.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
 
         {/* <div className="shape_image_1">

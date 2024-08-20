@@ -59,7 +59,7 @@ const Our_Products = () => {
           {[
             {
               icon: "icon_code.svg",
-              title: "ERP for Manufacturing",
+              title: "ERP Software Solutions",
               link: "service_details.html",
               services: [
                 "Software architecture design",
@@ -70,7 +70,7 @@ const Our_Products = () => {
             },
             {
               icon: "icon_programming_tree.svg",
-              title: "ERP for Logistics",
+              title: "Logistics ERP Software",
               link: "service_details.html",
               services: [
                 "TechGuard Audit",
@@ -81,7 +81,7 @@ const Our_Products = () => {
             },
             {
               icon: "icon_monitor_2.svg",
-              title: "ESG Automation",
+              title: "Material Resource Planning (MRP)",
               link: "service_details.html",
               services: [
                 "Web app development services",
@@ -92,7 +92,7 @@ const Our_Products = () => {
             },
             {
               icon: "icon_phone.svg",
-              title: "Asset Tracking",
+              title: "Human Resource Management System",
               link: "service_details.html",
               services: [
                 "Android development services",
@@ -103,7 +103,7 @@ const Our_Products = () => {
             },
             {
               icon: "icon_bug.svg",
-              title: "Paper Production Tracking",
+              title: "Warehouse Management System",
               link: "service_details.html",
               services: [
                 "PixelPerfection UI/UX Design",
@@ -114,7 +114,73 @@ const Our_Products = () => {
             },
             {
               icon: "icon_programming.svg",
-              title: "FMEA Insight",
+              title: "Vendor Management System",
+              link: "service_details.html",
+              services: [
+                "CareCraft Maintenance",
+                "FixItPro Maintenance",
+                "TechCare Maintenance",
+                "AssistEdge Maintenance",
+              ],
+            },
+            {
+              icon: "icon_programming.svg",
+              title: "Sales management system",
+              link: "service_details.html",
+              services: [
+                "CareCraft Maintenance",
+                "FixItPro Maintenance",
+                "TechCare Maintenance",
+                "AssistEdge Maintenance",
+              ],
+            },
+            {
+              icon: "icon_programming.svg",
+              title: "Visitor Management system",
+              link: "service_details.html",
+              services: [
+                "CareCraft Maintenance",
+                "FixItPro Maintenance",
+                "TechCare Maintenance",
+                "AssistEdge Maintenance",
+              ],
+            },
+            {
+              icon: "icon_programming.svg",
+              title: "Asset Management System (AMS)",
+              link: "service_details.html",
+              services: [
+                "CareCraft Maintenance",
+                "FixItPro Maintenance",
+                "TechCare Maintenance",
+                "AssistEdge Maintenance",
+              ],
+            },
+            {
+              icon: "icon_programming.svg",
+              title: "LOT Management system",
+              link: "service_details.html",
+              services: [
+                "CareCraft Maintenance",
+                "FixItPro Maintenance",
+                "TechCare Maintenance",
+                "AssistEdge Maintenance",
+              ],
+            },
+            {
+              icon: "icon_programming.svg",
+              title: "Paper Tracking Software",
+              link: "service_details.html",
+              services: [
+                "CareCraft Maintenance",
+                "FixItPro Maintenance",
+                "TechCare Maintenance",
+                "AssistEdge Maintenance",
+              ],
+            },
+            {
+              icon: "icon_programming.svg",
+              title: "Failure Mode and Effects Analysis (FMEA)",
               link: "service_details.html",
               services: [
                 "CareCraft Maintenance",

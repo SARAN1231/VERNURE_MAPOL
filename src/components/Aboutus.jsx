@@ -105,13 +105,13 @@ const Aboutus = () => {
                   About Us
                 </div>
                 <h2 className="heading_text">
-                  Mapol <mark>Mission & Goal</mark>
+                  Mapol Mission & Vision
                 </h2>
                 <p className="heading_description mb-0">
-                  At Techco, our mission is to empower businesses through
-                  innovative software solutions that streamline operations,
-                  foster growth, and drive success. With a commitment to
-                  excellence and customer satisfaction we strive.
+                Our Mission, We stay ahead of the curve by leveraging the latest, high-demand technologies to craft complete solutions that tackle your most critical business needs. We focus on delivering tangible outcomes, not empty promises.
+                </p>
+                <p className="heading_description mb-0">
+                Our Vision, Our vision is to be a global leader in IT-driven business solutions. We achieve this by consistently delivering creative, comprehensive solutions that are both efficient and cost-effective for our clients.  We foster a dynamic and positive work environment where our talented team members can thrive and contribute to our shared success
                 </p>
               </div>
             </div>

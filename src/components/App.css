@@ -61,6 +61,10 @@
 
 */
 
+.header-bg{
+  background-color: white;
+}
+
 .video-background {
   position: absolute;
   top: 0;
@@ -284,7 +288,8 @@ mark {
 .container {
   max-width: 1320px;
   padding-left: 15px;
-  padding-right: 15px; }
+  padding-right: 15px;
+ }
 
 .container-fluid {
   padding-left: 30px;

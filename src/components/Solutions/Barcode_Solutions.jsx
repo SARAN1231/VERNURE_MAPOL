@@ -3,6 +3,7 @@ import React from "react";
 import { Container, Row, Col, Button, Image, Badge } from "react-bootstrap";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
+import Navbar1 from "../Navbar1";
 const ITSolutionHeroSection = () => {
   const [activeTab, setActiveTab] = React.useState("warehouse_inventory");
   const technologies = {
@@ -303,12 +304,12 @@ const ITSolutionHeroSection = () => {
 
   return (
     <>
-      <Navbar />
-      <main class="page_content">
-        <section className="about_section section_space">
+      <Navbar1 />
+      <main className="page_content ">
+        <section className="about_section section_space bg-light" >
           <Container>
-            <Row className="align-items-center justify-content-lg-between">
-              <div className="col-lg-6">
+            <Row className="align-items-center justify-content-lg-between" style={{marginTop:'40px'}}>
+              <div className="col-lg-6" >
                 <div className="image_wrap">
                   <img
                     src="./images/Barcode-Solutions.png"
@@ -373,7 +374,7 @@ const ITSolutionHeroSection = () => {
           </Container>
         </section>
 
-        <section className="policy_section ">
+        <section className="policy_section section_space bg-light ">
           <Container>
             <Row>
               <Col lg={4}>
@@ -431,7 +432,7 @@ const ITSolutionHeroSection = () => {
           </Container>
         </section>
         <br />
-        <section className="service_details_section section_space ">
+        <section className="service_details_section section_space bg-light ">
           <div className="container">
             {/* <div className="details_item_image position-relative mb-4">
               <img

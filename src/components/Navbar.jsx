@@ -1,102 +1,122 @@
 import React, { useEffect, useState } from "react";
-import "./App.css"
+import "./App.css";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import bootstrapBundleMin from "bootstrap/dist/js/bootstrap.bundle.min";
 
 function Navbar() {
-   const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [color, setcolor] = useState(false);
 
-   const handleClick = () => {
-     setMenuOpen(!menuOpen);
-   };
+  const changecolor = () => {
+    if (window.scrollY >= 100) {
+      setcolor(true);
+    } else {
+      setcolor(false);
+    }
+  };
 
-   useEffect(() => {
-     const dropdowns = document.querySelectorAll(".dropdown");
-     dropdowns.forEach((dropdown) => {
-       dropdown.addEventListener("hide.bs.dropdown", handleDropdownHide);
-     });
+  useEffect(() => {
+    window.addEventListener("scroll", changecolor);
+    return () => {
+      window.removeEventListener("scroll", changecolor);
+    };
+  }, []);
+  const handleClick = () => {
+    setMenuOpen(!menuOpen);
+  };
 
-     const hoverDropdowns = document.querySelectorAll(
-       ".dropdown-hover, .dropdown-hover-all .dropdown"
-     );
-     hoverDropdowns.forEach((dropdown) => {
-       dropdown.addEventListener("mouseenter", handleMouseEnter);
-       dropdown.addEventListener("mouseleave", handleMouseLeave);
-     });
+  useEffect(() => {
+    const dropdowns = document.querySelectorAll(".dropdown");
+    dropdowns.forEach((dropdown) => {
+      dropdown.addEventListener("hide.bs.dropdown", handleDropdownHide);
+    });
 
-     return () => {
-       dropdowns.forEach((dropdown) => {
-         dropdown.removeEventListener("hide.bs.dropdown", handleDropdownHide);
-       });
+    const hoverDropdowns = document.querySelectorAll(
+      ".dropdown-hover, .dropdown-hover-all .dropdown"
+    );
+    hoverDropdowns.forEach((dropdown) => {
+      dropdown.addEventListener("mouseenter", handleMouseEnter);
+      dropdown.addEventListener("mouseleave", handleMouseLeave);
+    });
 
-       hoverDropdowns.forEach((dropdown) => {
-         dropdown.removeEventListener("mouseenter", handleMouseEnter);
-         dropdown.removeEventListener("mouseleave", handleMouseLeave);
-       });
-     };
-   }, []);
+    return () => {
+      dropdowns.forEach((dropdown) => {
+        dropdown.removeEventListener("hide.bs.dropdown", handleDropdownHide);
+      });
 
-   const handleDropdownHide = (event) => {
-     const target = event.target;
-     if (target.classList.contains("has-child-dropdown-show")) {
-       target.classList.remove("has-child-dropdown-show");
-       event.preventDefault();
-     }
-     event.stopPropagation();
-   };
+      hoverDropdowns.forEach((dropdown) => {
+        dropdown.removeEventListener("mouseenter", handleMouseEnter);
+        dropdown.removeEventListener("mouseleave", handleMouseLeave);
+      });
+    };
+  }, []);
 
-   const handleMouseEnter = (event) => {
-     const dropdown = event.target.querySelector(
-       ':scope>[data-bs-toggle="dropdown"]'
-     );
-     if (dropdown && !dropdown.classList.contains("show")) {
-       new window.bootstrap.Dropdown(dropdown).toggle();
-       event.target.classList.add("has-child-dropdown-show");
-       window.bootstrap.Dropdown.clearMenus();
-     }
-   };
+  const handleDropdownHide = (event) => {
+    const target = event.target;
+    if (target.classList.contains("has-child-dropdown-show")) {
+      target.classList.remove("has-child-dropdown-show");
+      event.preventDefault();
+    }
+    event.stopPropagation();
+  };
 
-   const handleMouseLeave = (event) => {
-     const dropdown = event.target.querySelector(
-       ':scope>[data-bs-toggle="dropdown"]'
-     );
-     if (dropdown && dropdown.classList.contains("show")) {
-       new window.bootstrap.Dropdown(dropdown).toggle();
-     }
-   };
+  const handleMouseEnter = (event) => {
+    const dropdown = event.target.querySelector(
+      ':scope>[data-bs-toggle="dropdown"]'
+    );
+    if (dropdown && !dropdown.classList.contains("show")) {
+      new window.bootstrap.Dropdown(dropdown).toggle();
+      event.target.classList.add("has-child-dropdown-show");
+      window.bootstrap.Dropdown.clearMenus();
+    }
+  };
+
+  const handleMouseLeave = (event) => {
+    const dropdown = event.target.querySelector(
+      ':scope>[data-bs-toggle="dropdown"]'
+    );
+    if (dropdown && dropdown.classList.contains("show")) {
+      new window.bootstrap.Dropdown(dropdown).toggle();
+    }
+  };
   return (
     <>
       {/* <Preloader /> */}
       <header
-        className="site_header site_header_2"
+        className={
+          color
+            ? "site_header site_header_2 header-bg"
+            : "site_header site_header_2"
+        }
         style={{
-          backgroundColor: "white",
-          color: "black",
+          position: "fixed",
+          color: "white",
           height: "100px",
-          position: "sticky",
+          width: "100%",
           top: "0",
+          left: "0",
           zIndex: "1000", // Ensures it stays on top of other elements
         }}
       >
-        <div className="header_bottom stricky">
-          <div className="container">
+        <div className="header_bottom sticky">
+          <div className="container" style={{ marginBottom: "40px" }}>
             <div className="row align-items-center">
               <div className="col-lg-3 col-5">
                 <div className="site_logo">
                   <Link to={"/"}>
-                  
                     <img
-                      src="./images/Mapol/mapol-logo-lg.png"
+                      src={
+                        color
+                          ? "./images/Mapol/mapol-logo-lg.png"
+                          : "./images/site_logo/site_logo_2.svg"
+                      }
                       alt="Mapol Logo"
                       style={{
-                        width: "250px",
-                        height: "100px",
-                        marginLeft: "30px",
+                        width: "200px",
+                        height: "80px",
                       }}
                     />
-                   
                   </Link>
                 </div>
               </div>
@@ -115,11 +135,18 @@ function Navbar() {
                           role="button"
                           data-bs-toggle="dropdown"
                           aria-expanded="false"
-                          style={{ color: "black" }}
+                          style={{
+                            color:
+                              window.innerWidth <= 768
+                                ? "black"
+                                : color
+                                ? "black"
+                                : "white",
+                          }}
                         >
                           Solutions
                         </a>
-                       
+
                         <div
                           className="dropdown-menu mega_menu_wrapper p-0"
                           aria-labelledby="services_submenu"
@@ -137,7 +164,7 @@ function Navbar() {
                                         <li>
                                           <span className="icon_list_text">
                                             <Link to={"/Automobiles"}>
-                                            Barcode Solutions
+                                              Barcode Solutions
                                             </Link>
                                           </span>
                                         </li>
@@ -149,7 +176,7 @@ function Navbar() {
                                         <li>
                                           <span className="icon_list_text">
                                             <Link to={"/Services"}>
-                                            RFID Solutions
+                                              RFID Solutions
                                             </Link>
                                           </span>
                                         </li>
@@ -161,7 +188,7 @@ function Navbar() {
                                         <li>
                                           <span className="icon_list_text">
                                             <Link to={"/Services"}>
-                                            Mobility Solutions
+                                              Mobility Solutions
                                             </Link>
                                           </span>
                                         </li>
@@ -173,7 +200,7 @@ function Navbar() {
                                         <li>
                                           <span className="icon_list_text">
                                             <Link to={"/Services"}>
-                                            AIDC Solutions
+                                              AIDC Solutions
                                             </Link>
                                           </span>
                                         </li>
@@ -189,7 +216,7 @@ function Navbar() {
                                         <li>
                                           <span className="icon_list_text">
                                             <Link to={"/Services"}>
-                                            POS Solutions
+                                              POS Solutions
                                             </Link>
                                           </span>
                                         </li>
@@ -201,7 +228,7 @@ function Navbar() {
                                         <li>
                                           <span className="icon_list_text">
                                             <Link to={"/Services"}>
-                                            Surveillance Solutions
+                                              Surveillance Solutions
                                             </Link>
                                           </span>
                                         </li>
@@ -213,7 +240,7 @@ function Navbar() {
                                         <li>
                                           <span className="icon_list_text">
                                             <Link to={"/Services"}>
-                                            Biometric Solutions
+                                              Biometric Solutions
                                             </Link>
                                           </span>
                                         </li>
@@ -239,7 +266,7 @@ function Navbar() {
                                         <li>
                                           <span className="icon_list_text">
                                             <Link to={"/Services"}>
-                                            Embedded Solutions
+                                              Embedded Solutions
                                             </Link>
                                           </span>
                                         </li>
@@ -251,7 +278,7 @@ function Navbar() {
                                         <li>
                                           <span className="icon_list_text">
                                             <Link to={"/Services"}>
-                                            Internet Of Things
+                                              Internet Of Things
                                             </Link>
                                           </span>
                                         </li>
@@ -263,7 +290,7 @@ function Navbar() {
                                         <li>
                                           <span className="icon_list_text">
                                             <Link to={"/Services"}>
-                                            E-Invoice
+                                              E-Invoice
                                             </Link>
                                           </span>
                                         </li>
@@ -341,7 +368,14 @@ function Navbar() {
                           role="button"
                           data-bs-toggle="dropdown"
                           aria-expanded="false"
-                          style={{ color: "black" }}
+                          style={{
+                            color:
+                              window.innerWidth <= 768
+                                ? "black"
+                                : color
+                                ? "black"
+                                : "white",
+                          }}
                         >
                           Products
                         </a>
@@ -376,7 +410,7 @@ function Navbar() {
                                           </small>
 
                                           <small className="iconbox_title">
-                                          ERP Software Solutions
+                                            ERP Software Solutions
                                           </small>
                                         </span>
                                         {/* <span className="description mb-0">
@@ -397,7 +431,7 @@ function Navbar() {
                                             />
                                           </small>
                                           <small className="iconbox_title">
-                                          Logistics ERP Software
+                                            Logistics ERP Software
                                           </small>
                                         </span>
                                         {/* <span className="description mb-0">
@@ -418,7 +452,7 @@ function Navbar() {
                                             />
                                           </small>
                                           <small className="iconbox_title">
-                                          Material Resource Planning (MRP)
+                                            Material Resource Planning (MRP)
                                           </small>
                                         </span>
                                         {/* <span className="description mb-0">
@@ -439,7 +473,7 @@ function Navbar() {
                                             />
                                           </small>
                                           <small className="iconbox_title">
-                                          Human Resource Management System
+                                            Human Resource Management System
                                           </small>
                                         </span>
                                         {/* <span className="description mb-0">
@@ -460,7 +494,7 @@ function Navbar() {
                                             />
                                           </small>
                                           <small className="iconbox_title">
-                                          Warehouse Management System
+                                            Warehouse Management System
                                           </small>
                                         </span>
                                         {/* <span className="description mb-0">
@@ -481,7 +515,7 @@ function Navbar() {
                                             />
                                           </small>
                                           <small className="iconbox_title">
-                                          Vendor Management System
+                                            Vendor Management System
                                           </small>
                                         </span>
                                         {/* <span className="description mb-0">
@@ -502,7 +536,7 @@ function Navbar() {
                                             />
                                           </small>
                                           <small className="iconbox_title">
-                                          Sales management system
+                                            Sales management system
                                           </small>
                                         </span>
                                         {/* <small className="description mb-0">
@@ -523,7 +557,7 @@ function Navbar() {
                                             />
                                           </small>
                                           <small className="iconbox_title">
-                                          Visitor Management system
+                                            Visitor Management system
                                           </small>
                                         </span>
                                         {/* <small className="description mb-0">
@@ -544,7 +578,7 @@ function Navbar() {
                                             />
                                           </small>
                                           <small className="iconbox_title">
-                                          Asset Management System (AMS)
+                                            Asset Management System (AMS)
                                           </small>
                                         </span>
                                         {/* <small className="description mb-0">
@@ -565,7 +599,7 @@ function Navbar() {
                                             />
                                           </small>
                                           <small className="iconbox_title">
-                                          LOT Management system
+                                            LOT Management system
                                           </small>
                                         </span>
                                         {/* <small className="description mb-0">
@@ -586,7 +620,7 @@ function Navbar() {
                                             />
                                           </small>
                                           <small className="iconbox_title">
-                                          Paper Tracking Software
+                                            Paper Tracking Software
                                           </small>
                                         </span>
                                         {/* <small className="description mb-0">
@@ -607,7 +641,8 @@ function Navbar() {
                                             />
                                           </small>
                                           <small className="iconbox_title">
-                                          Failure Mode and Effects Analysis (FMEA)
+                                            Failure Mode and Effects Analysis
+                                            (FMEA)
                                           </small>
                                         </span>
                                         {/* <small className="description mb-0">
@@ -746,31 +781,50 @@ function Navbar() {
                           role="button"
                           data-bs-toggle="dropdown"
                           aria-expanded="false"
-                          style={{ color: "black" }}
+                          style={{
+                            color:
+                              window.innerWidth <= 768
+                                ? "black"
+                                : color
+                                ? "black"
+                                : "white",
+                          }}
                         >
-                         Services
+                          Services
                         </a>
                         <ul
                           className="dropdown-menu"
                           aria-labelledby="portfolio_submenu"
                         >
                           <li>
-                            <Link to={"/Industry4"}>IT Infrastructure And Support Services</Link>
+                            <Link to={"/Mobile_Application"}>
+                              IT Infrastructure And Support Services
+                            </Link>
                           </li>
                           <li>
-                            <Link to={"/Sustainability"}>Web Design Services</Link>
+                            <Link to={"/Sustainability"}>
+                              Web Design Services
+                            </Link>
                           </li>
                           <li>
-                            <Link to={"/Casestudies"}>Software Development Services</Link>
+                            <Link to={"/Casestudies"}>
+                              Software Development Services
+                            </Link>
                           </li>
                           <li>
-                            <Link to={"/Blogs"}>Mobile Application Development </Link>
+                            <Link to={"/Blogs"}>
+                              Mobile Application Development{" "}
+                            </Link>
                           </li>
                           <li>
-                            <Link to={"/Blogs"}>Digital Marketing Services </Link>
+                            <Link to={"/Blogs"}>
+                              Digital Marketing Services{" "}
+                            </Link>
                           </li>
                           <li>
-                            <Link to={"/Blogs"}>Business Technology Consulting </Link>
+                            <Link to={"/Blogs"}>
+                              Business Technology Consulting{" "}
+                            </Link>
                           </li>
                         </ul>
                       </li>
@@ -782,7 +836,14 @@ function Navbar() {
                           role="button"
                           data-bs-toggle="dropdown"
                           aria-expanded="false"
-                          style={{ color: "black" }}
+                          style={{
+                            color:
+                              window.innerWidth <= 768
+                                ? "black"
+                                : color
+                                ? "black"
+                                : "white",
+                          }}
                         >
                           Clients
                         </a>
@@ -811,7 +872,14 @@ function Navbar() {
                           role="button"
                           data-bs-toggle="dropdown"
                           aria-expanded="false"
-                          style={{ color: "black" }}
+                          style={{
+                            color:
+                              window.innerWidth <= 768
+                                ? "black"
+                                : color
+                                ? "black"
+                                : "white",
+                          }}
                         >
                           Company
                         </a>
@@ -888,7 +956,9 @@ function Navbar() {
                       aria-expanded={menuOpen}
                       aria-label="Toggle navigation"
                       onClick={handleClick}
-                      style={{ color: "black" }}
+                      style={{
+                        color: color ? "black":"white"
+                      }}
                     >
                       <i
                         className={

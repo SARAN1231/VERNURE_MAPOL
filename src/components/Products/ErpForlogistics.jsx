@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Footer from "../Footer";
 import { Col, Container, Row } from "react-bootstrap";
 import Navbar from "../Navbar";
+import Navbar1 from "../Navbar1";
 
 const ErpForlogistics = () => {
   const [activeAccordion, setActiveAccordion] = useState(null);
@@ -124,43 +125,51 @@ const ErpForlogistics = () => {
     setActiveAccordion(activeAccordion === index ? null : index);
   };
 
-  const backgroundImage = "url(https://blog.fleetx.io/content/images/2022/11/ERP-for-Logistics.jpg)"
+  const backgroundImage =
+    "url(https://blog.fleetx.io/content/images/2022/11/ERP-for-Logistics.jpg)";
   return (
     <main className="page_content">
-      <Navbar />
-     
+      <Navbar1 />
+
       {/* Page Banner Section */}
-      <section
-      className="page_banner_section text-center"
-      style={{ background: backgroundImage,
-        background: backgroundImage,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    height: "40vh",
-    margin: "30px auto",
-    width: "80%"
-      
-      }}
-    >
-      <Container>
-        {/* <div className="heading_focus_text" style={{ color: "black" }}>
-          Product
-          <span className="badge bg-secondary">Details 😍</span>
-        </div>
-        <h1 className="page_title mb-0">ERP for Logistics</h1> */}
-      </Container>
-    </section>
+
+      <div style={{ margintop: "50px" }}></div>
+      {/* <section
+        className="page_banner_section text-center"
+        style={{
+          background: backgroundImage,
+         
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          height: "40vh",
+          margin: "30px auto",
+          width: "80%",
+        }}
+      >
+        
+      </section> */}
 
       {/* Service Details Section */}
       <section className="service_details_section section_space bg-light">
         <Container>
-          {/* <div className="details_item_image position-relative">
+          <div
+            className="details_item_image position-relative"
+            style={{
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              height: "40vh",
+              margin: "30px auto",
+              width: "100%",
+            }}
+          >
             <img
               src="./images/resource/ERP-for-Logistics.jpg"
               alt="Service Details Image"
-            /> */}
-            {/* <a
+            />
+          </div>
+          {/* <a
               className="video_btn ripple_effect"
               href="https://www.youtube.com/watch?v=7e90gBu4pas"
             >
@@ -169,7 +178,9 @@ const ErpForlogistics = () => {
               </span>
             </a> */}
           {/* </div> */}
-          <h2 className="details_item_title text-center">Logistics ERP Software</h2>
+          <h2 className="details_item_title text-center">
+            Logistics ERP Software
+          </h2>
           <p>
             Logistics process is the part and vital role of supply chain
             management that plans, implements and controls the effective forward
@@ -799,43 +810,53 @@ const ErpForlogistics = () => {
                     </div>
 
                     <div className="row align-items-center justify-content-lg-between">
-      <div className="col-lg-7">
-        <div className="faq_tabs">
-          <ul className="nav nav-tabs" id="faqTabs" role="tablist">
-            {faqData.map((item, index) => (
-              <li className="nav-item" key={index}>
-                <a
-                  className={`nav-link ${activeTab === index ? "active" : ""}`}
-                  id={`tab_${index}`}
-                  data-bs-toggle="tab"
-                  href={`#tab_content_${index}`}
-                  role="tab"
-                  aria-controls={`tab_content_${index}`}
-                  aria-selected={activeTab === index ? "true" : "false"}
-                  onClick={() => setActiveTab(index)}
-                  style={{ whiteSpace: 'nowrap' }}  // Add this style to keep the text on one line
-                >
-                  {item.question}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <div className="tab-content" id="faqTabContent">
-            {faqData.map((item, index) => (
-              <div
-                className={`tab-pane fade ${activeTab === index ? "show active" : ""}`}
-                id={`tab_content_${index}`}
-                role="tabpanel"
-                aria-labelledby={`tab_${index}`}
-                key={index}
-              >
-                <p className="m-0">{item.answer}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
+                      <div className="col-lg-7">
+                        <div className="faq_tabs">
+                          <ul
+                            className="nav nav-tabs"
+                            id="faqTabs"
+                            role="tablist"
+                          >
+                            {faqData.map((item, index) => (
+                              <li className="nav-item" key={index}>
+                                <a
+                                  className={`nav-link ${
+                                    activeTab === index ? "active" : ""
+                                  }`}
+                                  id={`tab_${index}`}
+                                  data-bs-toggle="tab"
+                                  href={`#tab_content_${index}`}
+                                  role="tab"
+                                  aria-controls={`tab_content_${index}`}
+                                  aria-selected={
+                                    activeTab === index ? "true" : "false"
+                                  }
+                                  onClick={() => setActiveTab(index)}
+                                  style={{ whiteSpace: "nowrap" }} // Add this style to keep the text on one line
+                                >
+                                  {item.question}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                          <div className="tab-content" id="faqTabContent">
+                            {faqData.map((item, index) => (
+                              <div
+                                className={`tab-pane fade ${
+                                  activeTab === index ? "show active" : ""
+                                }`}
+                                id={`tab_content_${index}`}
+                                role="tabpanel"
+                                aria-labelledby={`tab_${index}`}
+                                key={index}
+                              >
+                                <p className="m-0">{item.answer}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -1152,43 +1173,53 @@ const ErpForlogistics = () => {
                     </div>
 
                     <div className="row align-items-center justify-content-lg-between">
-      <div className="col-lg-7">
-        <div className="faq_tabs">
-          <ul className="nav nav-tabs" id="faqTabs" role="tablist">
-            {faqData.map((item, index) => (
-              <li className="nav-item" key={index}>
-                <a
-                  className={`nav-link ${activeTab === index ? "active" : ""}`}
-                  id={`tab_${index}`}
-                  data-bs-toggle="tab"
-                  href={`#tab_content_${index}`}
-                  role="tab"
-                  aria-controls={`tab_content_${index}`}
-                  aria-selected={activeTab === index ? "true" : "false"}
-                  onClick={() => setActiveTab(index)}
-                  style={{ whiteSpace: 'nowrap' }}  // Add this style to keep the text on one line
-                >
-                  {item.question}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <div className="tab-content" id="faqTabContent">
-            {faqData.map((item, index) => (
-              <div
-                className={`tab-pane fade ${activeTab === index ? "show active" : ""}`}
-                id={`tab_content_${index}`}
-                role="tabpanel"
-                aria-labelledby={`tab_${index}`}
-                key={index}
-              >
-                <p className="m-0">{item.answer}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
+                      <div className="col-lg-7">
+                        <div className="faq_tabs">
+                          <ul
+                            className="nav nav-tabs"
+                            id="faqTabs"
+                            role="tablist"
+                          >
+                            {faqData.map((item, index) => (
+                              <li className="nav-item" key={index}>
+                                <a
+                                  className={`nav-link ${
+                                    activeTab === index ? "active" : ""
+                                  }`}
+                                  id={`tab_${index}`}
+                                  data-bs-toggle="tab"
+                                  href={`#tab_content_${index}`}
+                                  role="tab"
+                                  aria-controls={`tab_content_${index}`}
+                                  aria-selected={
+                                    activeTab === index ? "true" : "false"
+                                  }
+                                  onClick={() => setActiveTab(index)}
+                                  style={{ whiteSpace: "nowrap" }} // Add this style to keep the text on one line
+                                >
+                                  {item.question}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                          <div className="tab-content" id="faqTabContent">
+                            {faqData.map((item, index) => (
+                              <div
+                                className={`tab-pane fade ${
+                                  activeTab === index ? "show active" : ""
+                                }`}
+                                id={`tab_content_${index}`}
+                                role="tabpanel"
+                                aria-labelledby={`tab_${index}`}
+                                key={index}
+                              >
+                                <p className="m-0">{item.answer}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -1411,43 +1442,53 @@ const ErpForlogistics = () => {
                     </div>
 
                     <div className="row align-items-center justify-content-lg-between">
-      <div className="col-lg-7">
-        <div className="faq_tabs">
-          <ul className="nav nav-tabs" id="faqTabs" role="tablist">
-            {faqData.map((item, index) => (
-              <li className="nav-item" key={index}>
-                <a
-                  className={`nav-link ${activeTab === index ? "active" : ""}`}
-                  id={`tab_${index}`}
-                  data-bs-toggle="tab"
-                  href={`#tab_content_${index}`}
-                  role="tab"
-                  aria-controls={`tab_content_${index}`}
-                  aria-selected={activeTab === index ? "true" : "false"}
-                  onClick={() => setActiveTab(index)}
-                  style={{ whiteSpace: 'nowrap' }}  // Add this style to keep the text on one line
-                >
-                  {item.question}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <div className="tab-content" id="faqTabContent">
-            {faqData.map((item, index) => (
-              <div
-                className={`tab-pane fade ${activeTab === index ? "show active" : ""}`}
-                id={`tab_content_${index}`}
-                role="tabpanel"
-                aria-labelledby={`tab_${index}`}
-                key={index}
-              >
-                <p className="m-0">{item.answer}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
+                      <div className="col-lg-7">
+                        <div className="faq_tabs">
+                          <ul
+                            className="nav nav-tabs"
+                            id="faqTabs"
+                            role="tablist"
+                          >
+                            {faqData.map((item, index) => (
+                              <li className="nav-item" key={index}>
+                                <a
+                                  className={`nav-link ${
+                                    activeTab === index ? "active" : ""
+                                  }`}
+                                  id={`tab_${index}`}
+                                  data-bs-toggle="tab"
+                                  href={`#tab_content_${index}`}
+                                  role="tab"
+                                  aria-controls={`tab_content_${index}`}
+                                  aria-selected={
+                                    activeTab === index ? "true" : "false"
+                                  }
+                                  onClick={() => setActiveTab(index)}
+                                  style={{ whiteSpace: "nowrap" }} // Add this style to keep the text on one line
+                                >
+                                  {item.question}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                          <div className="tab-content" id="faqTabContent">
+                            {faqData.map((item, index) => (
+                              <div
+                                className={`tab-pane fade ${
+                                  activeTab === index ? "show active" : ""
+                                }`}
+                                id={`tab_content_${index}`}
+                                role="tabpanel"
+                                aria-labelledby={`tab_${index}`}
+                                key={index}
+                              >
+                                <p className="m-0">{item.answer}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -1670,43 +1711,53 @@ const ErpForlogistics = () => {
                     </div>
 
                     <div className="row align-items-center justify-content-lg-between">
-      <div className="col-lg-7">
-        <div className="faq_tabs">
-          <ul className="nav nav-tabs" id="faqTabs" role="tablist">
-            {faqData.map((item, index) => (
-              <li className="nav-item" key={index}>
-                <a
-                  className={`nav-link ${activeTab === index ? "active" : ""}`}
-                  id={`tab_${index}`}
-                  data-bs-toggle="tab"
-                  href={`#tab_content_${index}`}
-                  role="tab"
-                  aria-controls={`tab_content_${index}`}
-                  aria-selected={activeTab === index ? "true" : "false"}
-                  onClick={() => setActiveTab(index)}
-                  style={{ whiteSpace: 'nowrap' }}  // Add this style to keep the text on one line
-                >
-                  {item.question}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <div className="tab-content" id="faqTabContent">
-            {faqData.map((item, index) => (
-              <div
-                className={`tab-pane fade ${activeTab === index ? "show active" : ""}`}
-                id={`tab_content_${index}`}
-                role="tabpanel"
-                aria-labelledby={`tab_${index}`}
-                key={index}
-              >
-                <p className="m-0">{item.answer}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
+                      <div className="col-lg-7">
+                        <div className="faq_tabs">
+                          <ul
+                            className="nav nav-tabs"
+                            id="faqTabs"
+                            role="tablist"
+                          >
+                            {faqData.map((item, index) => (
+                              <li className="nav-item" key={index}>
+                                <a
+                                  className={`nav-link ${
+                                    activeTab === index ? "active" : ""
+                                  }`}
+                                  id={`tab_${index}`}
+                                  data-bs-toggle="tab"
+                                  href={`#tab_content_${index}`}
+                                  role="tab"
+                                  aria-controls={`tab_content_${index}`}
+                                  aria-selected={
+                                    activeTab === index ? "true" : "false"
+                                  }
+                                  onClick={() => setActiveTab(index)}
+                                  style={{ whiteSpace: "nowrap" }} // Add this style to keep the text on one line
+                                >
+                                  {item.question}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                          <div className="tab-content" id="faqTabContent">
+                            {faqData.map((item, index) => (
+                              <div
+                                className={`tab-pane fade ${
+                                  activeTab === index ? "show active" : ""
+                                }`}
+                                id={`tab_content_${index}`}
+                                role="tabpanel"
+                                aria-labelledby={`tab_${index}`}
+                                key={index}
+                              >
+                                <p className="m-0">{item.answer}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
